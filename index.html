@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="p-5 md:p-10">
+    <section class="bg-red-400 rounded-2xl p-5">
+      <div class="container mx-auto">
+        <div class="flex">
+          <a href="#" class="logo-imgs w-44 pr-5 border-r mr-5 border-red-700">
+            <img src="./asset/images/cropped-Sofa-Traders-4.png" alt="" />
+          </a>
+          <div class="my-auto">
+            <button class="">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </button>
+            <ul class="flex font-bold text-white">
+              <li class="pr-5">
+                <a class="px-3 py-2 hover:border-b-2" href="#">Home</a>
+              </li>
+              <li class="pr-5">
+                <a class="px-3 py-2 hover:border-b-2" href="#">About</a>
+              </li>
+              <li class="pr-5">
+                <button
+                  class="px-3 py-0 hover:border-b-2"
+                  type="button"
+                  data-dropdown-toggle="dropdown"
+                >
+                  Services
+                </button>
+                <div
+                  class="hidden bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-4"
+                  id="dropdown"
+                >
+                  <div class="px-4 py-3">
+                    <span class="block text-sm">Bonnie Green</span>
+                    <span
+                      class="block text-sm font-medium text-gray-900 truncate"
+                      >name@flowbite.com</span
+                    >
+                  </div>
+                  <ul class="py-1" aria-labelledby="dropdown">
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                        >Dashboard</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                        >Settings</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                        >Earnings</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                        >Sign out</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="pr-5">
+                <a class="px-3 py-2 hover:border-b-2" href="#">Case study</a>
+              </li>
+              <li class="pr-5">
+                <a class="px-3 py-2 hover:border-b-2" href="#">Blog</a>
+              </li>
+            </ul>
+          </div>
+
+          <a
+            href="#"
+            class="ml-auto my-auto text-medium bg-white text-red-400 px-3 py-2 rounded-2xl flex h-10"
+            ><span class="px-2 hidden lg:block">Contact Us</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
+  </body>
+</html>

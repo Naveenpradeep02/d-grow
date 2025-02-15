@@ -1,5 +1,0 @@
-@property --num {
-  syntax: "<integer>";
-  initial-value: 0;
-  inherits: false;
-}

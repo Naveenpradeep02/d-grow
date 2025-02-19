@@ -88,11 +88,11 @@ body {
   background-color: #000000;
   z-index: -1;
 }
-.text-stoke {
+/* .text-stoke {
   font-family: sans-serif;
   -webkit-text-stroke: 1px black;
   color: transparent;
-}
+} */
 .circle {
   position: relative;
   width: 400px;
@@ -132,5 +132,298 @@ body {
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+/* =============================================bar logo =============================================== */
+.bar-line {
+  width: 100%;
+  padding: 20px 0px;
+  /* background-color: var(--main-primary-color); */
+  display: grid;
+  place-items: center;
+  padding: 10px 0px;
+}
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+.wrapper2 {
+  height: 90px;
+}
+@keyframes scrollLeft {
+  to {
+    left: -200px;
+  }
+}
+@keyframes scrollLeft2 {
+  to {
+    right: -200px;
+  }
+}
+.item {
+  width: 200px;
+  height: 100px;
+  background-color: var(--light-color);
+  border-radius: 7px;
+  position: absolute;
+  left: calc(200px * 8);
+  animation: scrollLeft 30s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 10px rgb(164, 164, 164);
+}
+.item img {
+  width: 150px;
+}
+.text-slide {
+  width: 200px;
+  height: 50px;
+  background-color: var(--light-color);
+  border-radius: 7px;
+  position: absolute;
+  right: calc(200px * 8);
+  animation: scrollLeft2 30s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--main-primary-font);
+  box-shadow: 2px 2px 10px rgb(164, 164, 164);
+}
+
+.item1,
+.text-slide1 {
+  animation-delay: calc(30s / 8 * (8 - 1) * -1);
+}
+.item2,
+.text-slide2 {
+  animation-delay: calc(30s / 8 * (8 - 2) * -1);
+}
+.item3,
+.text-slide3 {
+  animation-delay: calc(30s / 8 * (8 - 3) * -1);
+}
+.item4,
+.text-slide4 {
+  animation-delay: calc(30s / 8 * (8 - 4) * -1);
+}
+.item5,
+.text-slide5 {
+  animation-delay: calc(30s / 8 * (8 - 5) * -1);
+}
+.item6,
+.text-slide6 {
+  animation-delay: calc(30s / 8 * (8 - 6) * -1);
+}
+.item7,
+.text-slide7 {
+  animation-delay: calc(30s / 8 * (8 - 7) * -1);
+}
+.item8,
+.text-slide8 {
+  animation-delay: calc(30s / 8 * (8 - 8) * -1);
+}
+/* ================================================================================== */
+
+@media screen and (max-width: 575px) {
+  #work-process {
+    margin-bottom: 150px;
+  }
+  #work-process ul {
+    display: grid;
+    gap: 150px;
+  }
+  #work-process ul li {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+  }
+  #work-process ul li span {
+    display: none;
+  }
+  #work-process ul li div {
+    width: fit-content;
+    position: absolute;
+    top: 30%;
+    box-shadow: 5px 2px 10px rgb(115, 115, 115);
+    left: 10%;
+    background-color: #000;
+    padding: 14px;
+    border-radius: 0px 16px 16px 16px;
+  }
+  #work-process ul li:nth-child(odd) div::before {
+    background: transparent;
+  }
+  #work-process ul li:nth-child(2n) div {
+    left: 10%;
+    border-radius: 16px 0px 16px 16px;
+    box-shadow: 2px 5px 10px rgb(148, 148, 148);
+  }
+  #work-process ul li:nth-child(2n) div::before {
+    background: transparent;
+  }
+  #work-process ul li:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 30px;
+    width: 2px;
+    height: 200px;
+    background-color: #000000;
+    z-index: -1;
+  }
+  .circle {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .circle-logo {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: #51b867;
+    background-position: center;
+    border-radius: 50%;
+    border: 5px solid rgb(0, 0, 0);
+  }
+  .circle-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: rotatetext 10s infinite;
+  }
+  .circle-text p span {
+    position: absolute;
+    left: 50%;
+    font-size: 1.2rem;
+    transform-origin: 0 150px;
+    font-family: sans-serif;
+    -webkit-text-stroke: 1px black;
+    color: transparent;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  #work-process {
+    margin-bottom: 150px;
+  }
+  #work-process ul {
+    display: grid;
+    gap: 150px;
+  }
+  #work-process ul li {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+  }
+  #work-process ul li span {
+    display: none;
+  }
+  #work-process ul li div {
+    width: fit-content;
+    position: absolute;
+    top: 30%;
+    box-shadow: 5px 2px 10px rgb(115, 115, 115);
+    left: 10%;
+    background-color: #000;
+    padding: 14px;
+    border-radius: 0px 16px 16px 16px;
+  }
+  #work-process ul li:nth-child(odd) div::before {
+    background: transparent;
+  }
+  #work-process ul li:nth-child(2n) div {
+    left: 10%;
+    border-radius: 16px 0px 16px 16px;
+    box-shadow: 2px 5px 10px rgb(148, 148, 148);
+  }
+  #work-process ul li:nth-child(2n) div::before {
+    background: transparent;
+  }
+  #work-process ul li:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 30px;
+    width: 2px;
+    height: 200px;
+    background-color: #000000;
+    z-index: -1;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #work-process {
+    margin-bottom: 150px;
+  }
+  #work-process ul {
+    display: grid;
+    gap: 150px;
+  }
+  #work-process ul li {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+  }
+  #work-process ul li span {
+    display: none;
+  }
+  #work-process ul li div {
+    width: fit-content;
+    position: absolute;
+    top: 30%;
+    box-shadow: 5px 2px 10px rgb(115, 115, 115);
+    left: 10%;
+    background-color: #000;
+    padding: 14px;
+    border-radius: 0px 16px 16px 16px;
+  }
+  #work-process ul li:nth-child(odd) div::before {
+    background: transparent;
+  }
+  #work-process ul li:nth-child(2n) div {
+    left: 10%;
+    border-radius: 16px 0px 16px 16px;
+    box-shadow: 2px 5px 10px rgb(148, 148, 148);
+  }
+  #work-process ul li:nth-child(2n) div::before {
+    background: transparent;
+  }
+  #work-process ul li:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 30px;
+    width: 2px;
+    height: 200px;
+    background-color: #000000;
+    z-index: -1;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  #work-process ul li div {
+    width: 300px;
+  }
+  .over-data {
+    display: none;
   }
 }

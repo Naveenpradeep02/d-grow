@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="" rel="stylesheet" />
+    <title>D-Grow</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../../asset/css/style.css" />
+    <!-- tailwind -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <!--  -->
+  </head>
+  <body>
+    <div class="bg-red-100">
+      <!-- ===================================== NAVIGATION BAR ======================================= -->
+
+      <section class="bg-red-600 rounded-2xl m-2 p-5 sticky top-0 z-40 md:m-10">
+        <div class="container mx-auto">
+          <!-- navbar -->
+          <div class="flex">
+            <a
+              href="#"
+              class="logo-imgs w-44 pr-5 border-r mr-5 border-red-900"
+            >
+              <img
+                class="w-44"
+                src="../../asset/images/d-growlogo.png"
+                alt=""
+              />
+            </a>
+            <div class="my-auto">
+              <button class="lg:hidden" onclick="mobileMenu()">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+              </button>
+              <ul class="font-bold text-white hidden lg:flex">
+                <li class="pr-5">
+                  <a class="px-3 py-2 hover:border-b-2" href="../../index.html"
+                    >Home</a
+                  >
+                </li>
+                <li class="pr-5">
+                  <a class="px-3 py-2 hover:border-b-2" href="#">About</a>
+                </li>
+                <li class="pr-5">
+                  <button
+                    class="px-3 pb-2 text-black"
+                    data-dropdown-toggle="dropdown"
+                  >
+                    Services
+                  </button>
+                  <div
+                    class="hidden bg-white text-base z-5 list-none divide-y divide-gray-100 rounded shadow my-4"
+                    id="dropdown"
+                  >
+                    <ul class="py-1" aria-labelledby="dropdown">
+                      <li>
+                        <a
+                          href="#"
+                          class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                          >SMM</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                          >Lead Generate</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="./pages/services/seo.html"
+                          class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                          >SEO</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                          >Website Designing</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                          >Branding</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="pr-5">
+                  <a class="px-3 py-2 hover:border-b-2" href="#">Case study</a>
+                </li>
+                <li class="pr-5">
+                  <a class="px-3 py-2 hover:border-b-2" href="#">Blog</a>
+                </li>
+                <li class="pr-5">
+                  <a class="px-3 py-2 hover:border-b-2" href="../contact.html">Contacts</a>
+                </li>
+              </ul>
+            </div>
+
+            <a
+              href="#"
+              class="ml-auto my-auto text-medium bg-white text-red-400 px-3 py-2 rounded-2xl flex h-10 hover:bg-green-500 hover:text-white border-none"
+              ><span class="px-2 text-sm md:text-xl">MEDGROW</span>
+            </a>
+          </div>
+          <!-- moblie nav bar -->
+          <div class="hidden" id="mobile-Menu">
+            <ul
+              class="font-bold text-white mt-10 grid place-items-center lg:hidden"
+            >
+              <li class="mt-2">
+                <a class="py-2" href="#">Home</a>
+              </li>
+              <li class="mt-2">
+                <a class="py-2" href="#">About</a>
+              </li>
+              <li class="mt-2">
+                <a class="py-2" href="./service.html">Services</a>
+              </li>
+              <li class="mt-2">
+                <a class="py-2" href="#">Case study</a>
+              </li>
+              <li class="mt-2">
+                <a class="py-2" href="#">Blog</a>
+              </li>
+              <li class="mt-2">
+                <a class="py-2 hover:border-b-2" href="#">Contacts</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- ===================================== NAVIGATION BAR (END)======================================= -->
+      <!-- ==================================== SERVICE HEADER ============================================ -->
+      <section class="rounded-2xl p-5 h-96">
+        <div class="container mx-auto">
+          <div class="flex flex-col items-center">
+            <h1 class="text-8xl font-bold text-black pt-20">SEO</h1>
+            <p class="text-black text-center text-xl pt-5">
+              Rank your website on Google's first page and pull the traffic
+              towards your website within 90 Days!
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- ==================================== SERVICE HEADER (END)============================================ -->
+    </div>
+    <!-- ===================================== HERO SECTION ======================================= -->
+
+    <section
+      id="hero"
+      class="px-5 py-5 relative mx-auto md:px-15 md:py-5 lg:overflow-visible"
+    >
+      <div
+        class="flex flex-col-reverse py-10 text-red-600 md:flex-row md:py-20"
+      >
+        <div class="w-full md:w-1/2">
+          <img class="" src="../../asset/images/seo-hero-img.jpg" alt="" />
+        </div>
+        <div class="pt-20 pl-2 w-full md:w-1/2">
+          <p class="text-lg mb-2 font-bold">No.1 SEO Agency In Chennai</p>
+          <h2 class="text-3xl font-bold mb-1 md:text-5xl md:mb-5">
+            Experiencing difficulty <br />
+            driving traffic to your <br />
+            website?
+          </h2>
+          <p class="my-4 text-black text-sm md:text-xl">
+            It's time to stop being invisible online. Your website deserves more
+            than just a digital presence—it deserves attention, traffic, and
+            conversions. At our SEO Agency In Chennai, we don't just boost
+            traffic; we drive the right traffic. With over 5 Years of
+            experience, we craft strategies that turn clicks into customers.
+          </p>
+          <p class="text-lg mb-2 text-black font-bold">
+            Ready to see your website finally work for you?
+          </p>
+          <p class="my-4 text-black text-sm md:text-xl">
+            Let's transform your online presence today.
+          </p>
+          <div class="flex">
+            <a href="#" class="w-fit py-2 px-3 bg-red-600 rounded-xl text-white"
+              >Book Your Free Consultation Now!</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden lg:block absolute -right-20 -top-40 -z-10 over-data">
+        <div class="w-60 h-60 bg-red-100 rounded-full"></div>
+        <div class="w-20 h-20 bg-red-100 rounded-full"></div>
+      </div>
+    </section>
+    <!-- ===================================== HERO SECTION (END)======================================= -->
+    <section class="px-5 relative mx-auto md:px-15">
+      <h2 class="text-5xl font-bold text-red-600 my-14 text-center">
+        Our Clients
+      </h2>
+    </section>
+
+    <!--========================================== counter section ============================-->
+    <div class="relative font-inter antialiased">
+      <section
+        class="relative flex flex-col justify-center bg-red-50 overflow-hidden"
+      >
+        <div
+          class="w-full max-w-5xl mx-auto px-4 md:px-6 py-24 flex flex-col items-center"
+        >
+          <main class="grid gap-12 md:grid-cols-4 md:gap-16">
+            <!-- Block #1 -->
+            <article>
+              <div
+                class="w-14 h-14 rounded shadow-md bg-white flex justify-center items-center rotate-3 mb-6"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="31" height="20">
+                  <defs>
+                    <linearGradient
+                      id="icon1-a"
+                      x1="50%"
+                      x2="50%"
+                      y1="0%"
+                      y2="100%"
+                    >
+                      <stop offset="0%" stop-color="#A5B4FC" />
+                      <stop offset="100%" stop-color="#4F46E5" />
+                    </linearGradient>
+                    <linearGradient
+                      id="icon1-b"
+                      x1="50%"
+                      x2="50%"
+                      y1="0%"
+                      y2="100%"
+                    >
+                      <stop offset="0%" stop-color="#EEF2FF" />
+                      <stop offset="100%" stop-color="#C7D2FE" />
+                    </linearGradient>
+                  </defs>
+                  <g fill="none" fill-rule="nonzero">
+                    <path
+                      fill="url(#icon1-a)"
+                      d="M20.625 0H9.375a9.375 9.375 0 0 0 0 18.75h11.25a9.375 9.375 0 0 0 0-18.75Z"
+                      transform="translate(.885 .885)"
+                    />
+                    <path
+                      fill="url(#icon1-b)"
+                      d="M9.375 17.5A8.125 8.125 0 0 1 1.25 9.375 8.125 8.125 0 0 1 9.375 1.25 8.125 8.125 0 0 1 17.5 9.375 8.125 8.125 0 0 1 9.375 17.5Z"
+                      transform="translate(.885 .885)"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <h2>
+                <span
+                  class="flex tabular-nums text-slate-900 text-5xl font-extrabold mb-2 transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
+                  x-data="{ shown: false }"
+                  x-intersect.once="shown = true"
+                  :class="shown && '[--num:300]'"
+                >
+                  <span class="supports-[counter-set]:sr-only">300</span>K+
+                </span>
+                <span
+                  class="inline-flex text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-red-300 mb-2"
+                  >Leads</span
+                >
+              </h2>
+              <p class="text-sm text-slate-500">
+                Many desktop publishing packages and web page editors now use
+                Pinky as their default model text.
+              </p>
+            </article>
+            <!-- Block #2 -->
+            <article>
+              <div
+                class="w-14 h-14 rounded shadow-md bg-white flex justify-center items-center -rotate-3 mb-6"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="19">
+                  <defs>
+                    <linearGradient
+                      id="icon2-a"
+                      x1="50%"
+                      x2="50%"
+                      y1="0%"
+                      y2="100%"
+                    >
+                      <stop offset="0%" stop-color="#A5B4FC" />
+                      <stop offset="100%" stop-color="#4F46E5" />
+                    </linearGradient>
+                  </defs>
+                  <g fill="none" fill-rule="nonzero">
+                    <path
+                      fill="url(#icon2-a)"
+                      d="M5.5 0a5.5 5.5 0 0 0 0 11c.159 0 .314-.01.469-.024a15.896 15.896 0 0 1-2.393 6.759A.5.5 0 0 0 4 18.5h1a.5.5 0 0 0 .362-.155C7.934 15.64 11 11.215 11 5.5A5.506 5.506 0 0 0 5.5 0Z"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <h2>
+                <span
+                  class="flex tabular-nums text-slate-900 text-5xl font-extrabold mb-2 transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
+                  x-data="{ shown: false }"
+                  x-intersect.once="shown = true"
+                  :class="shown && '[--num:100]'"
+                >
+                  <span class="supports-[counter-set]:sr-only">100</span>M+
+                </span>
+                <span
+                  class="inline-flex text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-red-300 mb-2"
+                  >Organic Traffic</span
+                >
+              </h2>
+              <p class="text-sm text-slate-500">
+                Many desktop publishing packages and web page editors now use
+                Pinky as their default model text.
+              </p>
+            </article>
+            <!-- Block #3 -->
+            <article>
+              <div
+                class="w-14 h-14 rounded shadow-md bg-white flex justify-center items-center -rotate-3 mb-6"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="19">
+                  <defs>
+                    <linearGradient
+                      id="icon2-a"
+                      x1="50%"
+                      x2="50%"
+                      y1="0%"
+                      y2="100%"
+                    >
+                      <stop offset="0%" stop-color="#A5B4FC" />
+                      <stop offset="100%" stop-color="#4F46E5" />
+                    </linearGradient>
+                  </defs>
+                  <g fill="none" fill-rule="nonzero">
+                    <path
+                      fill="url(#icon2-a)"
+                      d="M5.5 0a5.5 5.5 0 0 0 0 11c.159 0 .314-.01.469-.024a15.896 15.896 0 0 1-2.393 6.759A.5.5 0 0 0 4 18.5h1a.5.5 0 0 0 .362-.155C7.934 15.64 11 11.215 11 5.5A5.506 5.506 0 0 0 5.5 0Z"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <h2>
+                <span
+                  class="flex tabular-nums text-slate-900 text-5xl font-extrabold mb-2 transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
+                  x-data="{ shown: false }"
+                  x-intersect.once="shown = true"
+                  :class="shown && '[--num:60]'"
+                >
+                  <span class="supports-[counter-set]:sr-only">60</span>DAYS
+                </span>
+                <span
+                  class="inline-flex text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-red-300 mb-2"
+                  >Rank On Google's 1st Page</span
+                >
+              </h2>
+              <p class="text-sm text-slate-500">
+                Many desktop publishing packages and web page editors now use
+                Pinky as their default model text.
+              </p>
+            </article>
+            <!-- Block #4 -->
+            <article>
+              <div
+                class="w-14 h-14 rounded shadow-md bg-white flex justify-center items-center -rotate-3 mb-6"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="19">
+                  <defs>
+                    <linearGradient
+                      id="icon2-a"
+                      x1="50%"
+                      x2="50%"
+                      y1="0%"
+                      y2="100%"
+                    >
+                      <stop offset="0%" stop-color="#A5B4FC" />
+                      <stop offset="100%" stop-color="#4F46E5" />
+                    </linearGradient>
+                  </defs>
+                  <g fill="none" fill-rule="nonzero">
+                    <path
+                      fill="url(#icon2-a)"
+                      d="M5.5 0a5.5 5.5 0 0 0 0 11c.159 0 .314-.01.469-.024a15.896 15.896 0 0 1-2.393 6.759A.5.5 0 0 0 4 18.5h1a.5.5 0 0 0 .362-.155C7.934 15.64 11 11.215 11 5.5A5.506 5.506 0 0 0 5.5 0Z"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <h2>
+                <span
+                  class="flex tabular-nums text-slate-900 text-5xl font-extrabold mb-2 transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
+                  x-data="{ shown: false }"
+                  x-intersect.once="shown = true"
+                  :class="shown && '[--num:32]'"
+                >
+                  <span class="supports-[counter-set]:sr-only">32</span>DAYS
+                </span>
+                <span
+                  class="inline-flex text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-red-300 mb-2"
+                  >List Your GMB In Google</span
+                >
+              </h2>
+              <p class="text-sm text-slate-500">
+                Many desktop publishing packages and web page editors now use
+                Pinky as their default model text.
+              </p>
+            </article>
+          </main>
+        </div>
+      </section>
+    </div>
+    <!--========================================== counter section  (END) ============================-->
+    <!-- ============================================== WHY CHOOSE US ================================ -->
+    <section class="px-5 relative mx-auto md:px-15">
+      <h2 class="text-5xl font-bold text-red-600 my-5 mt-14 text-center">
+        Why D-Grow's SEO is Essential for Your Business?
+      </h2>
+      <p class="text-center text-xl">
+        Supercharge Your Business's Growth With the power of the Best SEO Agency
+        in Chennai to Dominate the Market
+      </p>
+
+      <div class="md:px-40 grid gap-20 md:grid-flow-col md:grid-cols-3">
+        <div class="flex mt-16">
+          <div class="w-10 h-10 p-2 bg-red-600 rounded-full mr-2">
+            <span class="w-10 h-10">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-lightbulb text-white"
+              >
+                <path
+                  d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"
+                />
+                <path d="M9 18h6" />
+                <path d="M10 22h4" />
+              </svg>
+            </span>
+          </div>
+          <div class="flex flex-col">
+            <h3 class="text-2xl font-bold text-red-600">
+              Skyrocket Your Visibility
+            </h3>
+            <p class="text-black text-lg">
+              Get noticed by the right audience and make your website the star
+              of search results.
+            </p>
+          </div>
+        </div>
+        <div class="flex mt-16">
+          <div class="w-10 h-10 p-2 bg-red-600 rounded-full mr-2">
+            <span class="w-10 h-10">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-send text-white"
+              >
+                <path
+                  d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"
+                />
+                <path d="m21.854 2.147-10.94 10.939" />
+              </svg>
+            </span>
+          </div>
+          <div class="flex flex-col">
+            <h3 class="text-2xl font-bold text-red-600">
+              Dominate Search Rankings
+            </h3>
+            <p class="text-black text-lg">
+              Secure top positions on search engines, outshine your competitors,
+              and become the go-to brand.
+            </p>
+          </div>
+        </div>
+        <div class="flex mt-16">
+          <div class="w-10 h-10 p-2 bg-red-600 rounded-full mr-2">
+            <span class="w-10 h-10">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-map-plus text-white"
+              >
+                <path
+                  d="m11 19-1.106-.552a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0l4.212 2.106a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619V12"
+                />
+                <path d="M15 5.764V12" />
+                <path d="M18 15v6" />
+                <path d="M21 18h-6" />
+                <path d="M9 3.236v15" />
+              </svg>
+            </span>
+          </div>
+          <div class="flex flex-col">
+            <h3 class="text-2xl font-bold text-red-600">
+              Drive Targeted Traffic
+            </h3>
+            <p class="text-black text-lg">
+              Flood your site with visitors who are actively searching for what
+              you offer, turning clicks into conversions.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="md:px-40 grid gap-20 md:grid-flow-col md:grid-cols-3 mb-10">
+        <div class="flex mt-16">
+          <div class="w-10 h-10 p-2 bg-red-600 rounded-full mr-2">
+            <span class="w-10 h-10">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-images text-white"
+              >
+                <path d="M18 22H4a2 2 0 0 1-2-2V6" />
+                <path d="m22 13-1.296-1.296a2.41 2.41 0 0 0-3.408 0L11 18" />
+                <circle cx="12" cy="8" r="2" />
+                <rect width="16" height="16" x="6" y="2" rx="2" />
+              </svg>
+            </span>
+          </div>
+          <div class="flex flex-col">
+            <h3 class="text-2xl font-bold text-red-600">
+              Generate High-Quality Leads
+            </h3>
+            <p class="text-black text-lg">
+              Attract the right prospects ready to engage and buy, boosting your
+              bottom line.
+            </p>
+          </div>
+        </div>
+        <div class="flex mt-16">
+          <div class="w-10 h-10 p-2 bg-red-600 rounded-full mr-2">
+            <span class="w-10 h-10">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-keyboard text-white"
+              >
+                <path d="M10 8h.01" />
+                <path d="M12 12h.01" />
+                <path d="M14 8h.01" />
+                <path d="M16 12h.01" />
+                <path d="M18 8h.01" />
+                <path d="M6 8h.01" />
+                <path d="M7 16h10" />
+                <path d="M8 12h.01" />
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+              </svg>
+            </span>
+          </div>
+          <div class="flex flex-col">
+            <h3 class="text-2xl font-bold text-red-600">Maximize ROI</h3>
+            <p class="text-black text-lg">
+              Ensure every dollar you invest in SEO delivers measurable returns,
+              fueling your business growth efficiently.
+            </p>
+          </div>
+        </div>
+        <div class="flex mt-16">
+          <div class="w-10 h-10 p-2 bg-red-600 rounded-full mr-2">
+            <span class="w-10 h-10">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-lightbulb text-white"
+              >
+                <path
+                  d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"
+                />
+                <path d="M9 18h6" />
+                <path d="M10 22h4" />
+              </svg>
+            </span>
+          </div>
+          <div class="flex flex-col">
+            <h3 class="text-2xl font-bold text-red-600">
+              Skyrocket Your Visibility
+            </h3>
+            <p class="text-black text-lg">
+              Get noticed by the right audience and make your website the star
+              of search results.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ============================================== WHY CHOOSE US (END)================================ -->
+    <!-- ============================================ client logo ===================================== -->
+    <div class="bar-line">
+      <div class="wrapper">
+        <div class="item item1">
+          <img src="../../assets/images/brand/1.png" alt="" />
+        </div>
+        <div class="item item2">
+          <img src="../../assets/images/brand/2.png" alt="" />
+        </div>
+        <div class="item item3">
+          <img src="../../assets/images/brand/3.png" alt="" />
+        </div>
+        <div class="item item4">
+          <img src="../../assets/images/brand/4.png" alt="" />
+        </div>
+        <div class="item item5">
+          <img src="../../assets/images/brand/5.png" alt="" />
+        </div>
+        <div class="item item6">
+          <img src="../../assets/images/brand/6.png" alt="" />
+        </div>
+        <div class="item item7">
+          <img src="../../assets/images/brand/7.png" alt="" />
+        </div>
+        <div class="item item8">
+          <img src="../../assets/images/brand/7.png" alt="" />
+        </div>
+      </div>
+      <div class="wrapper wrapper2">
+        <div class="text-slide text-slide1">Aathvi</div>
+        <div class="text-slide text-slide2">Adhiya Asthetic</div>
+        <div class="text-slide text-slide3">Skinora</div>
+        <div class="text-slide text-slide4">Sleep Bud Sleep</div>
+        <div class="text-slide text-slide5">Sleep & Wellness</div>
+        <div class="text-slide text-slide6">Glemcosmo</div>
+        <div class="text-slide text-slide7">Marks Biotech</div>
+        <div class="text-slide text-slide8">Aravind Polyclinic</div>
+      </div>
+    </div>
+    <!-- ============================================ client logo(END) ===================================== -->
+    <section class="px-5 relative mx-auto md:px-15">
+      <div class="flex flex-col py-10 text-red-600 md:flex-row md:py-20">
+        <div class="w-full md:w-1/2">
+          <img class="" src="../../asset/images/SEO Strategy.png" alt="" />
+        </div>
+        <div class="pl-2 w-full md:w-1/2">
+          <div class="flex flex-col gap-5 md:flex-row">
+            <div
+              class="flex mt-5 h-40 rounded-lg place-items-center p-5"
+              style="box-shadow: 0px 0px 16px #868686"
+            >
+              <div class="w-10 h-10 p-2 bg-red-600 rounded-full mr-5">
+                <span class="w-10 h-10">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-hard-drive text-white"
+                  >
+                    <line x1="22" x2="2" y1="12" y2="12" />
+                    <path
+                      d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"
+                    />
+                    <line x1="6" x2="6.01" y1="16" y2="16" />
+                    <line x1="10" x2="10.01" y1="16" y2="16" />
+                  </svg>
+                </span>
+              </div>
+              <div class="flex flex-col">
+                <h3 class="text-xl font-bold text-red-600">
+                  Healthcare Providers
+                </h3>
+                <p class="text-black text-sm">
+                  Enhance online presence to reach more patients and improve
+                  local search visibility.
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex mt-5 h-36 rounded-lg place-items-center p-5"
+              style="box-shadow: 0px 0px 16px #868686"
+            >
+              <div class="w-10 h-10 p-2 bg-red-600 rounded-full mr-5">
+                <span class="w-10 h-10">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-hard-drive text-white"
+                  >
+                    <line x1="22" x2="2" y1="12" y2="12" />
+                    <path
+                      d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"
+                    />
+                    <line x1="6" x2="6.01" y1="16" y2="16" />
+                    <line x1="10" x2="10.01" y1="16" y2="16" />
+                  </svg>
+                </span>
+              </div>
+              <div class="flex flex-col">
+                <h3 class="text-xl font-bold text-red-600">Legal Firms</h3>
+                <p class="text-black text-sm">
+                  Gain more clients by ranking higher in search results for
+                  legal services.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-5 md:flex-row">
+            <div
+              class="flex mt-5 h-40 rounded-lg place-items-center p-5"
+              style="box-shadow: 0px 0px 16px #868686"
+            >
+              <div class="w-10 h-10 p-2 bg-red-600 rounded-full mr-5">
+                <span class="w-10 h-10">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-hard-drive text-white"
+                  >
+                    <line x1="22" x2="2" y1="12" y2="12" />
+                    <path
+                      d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"
+                    />
+                    <line x1="6" x2="6.01" y1="16" y2="16" />
+                    <line x1="10" x2="10.01" y1="16" y2="16" />
+                  </svg>
+                </span>
+              </div>
+              <div class="flex flex-col">
+                <h3 class="text-xl font-bold text-red-600">
+                  Education and Training
+                </h3>
+                <p class="text-black text-sm">
+                  Reach students and professionals looking for educational
+                  programs and training opportunities.
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex mt-5 h-36 rounded-lg place-items-center p-5"
+              style="box-shadow: 0px 0px 16px #868686"
+            >
+              <div class="w-10 h-10 p-2 bg-red-600 rounded-full mr-5">
+                <span class="w-10 h-10">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-hard-drive text-white"
+                  >
+                    <line x1="22" x2="2" y1="12" y2="12" />
+                    <path
+                      d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"
+                    />
+                    <line x1="6" x2="6.01" y1="16" y2="16" />
+                    <line x1="10" x2="10.01" y1="16" y2="16" />
+                  </svg>
+                </span>
+              </div>
+              <div class="flex flex-col">
+                <h3 class="text-xl font-bold text-red-600">
+                  Tech and Software Companies
+                </h3>
+                <p class="text-black text-sm">
+                  Enhance visibility for tech products, software solutions, and
+                  industry-related content.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-5 md:flex-row">
+            <div
+              class="flex mt-5 h-40 rounded-lg place-items-center p-5"
+              style="box-shadow: 0px 0px 16px #868686"
+            >
+              <div class="w-10 h-10 p-2 bg-red-600 rounded-full mr-5">
+                <span class="w-10 h-10">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-hard-drive text-white"
+                  >
+                    <line x1="22" x2="2" y1="12" y2="12" />
+                    <path
+                      d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"
+                    />
+                    <line x1="6" x2="6.01" y1="16" y2="16" />
+                    <line x1="10" x2="10.01" y1="16" y2="16" />
+                  </svg>
+                </span>
+              </div>
+              <div class="flex flex-col">
+                <h3 class="text-xl font-bold text-red-600">
+                  Professional Services
+                </h3>
+                <p class="text-black text-sm">
+                  Improve search rankings for consultants, coaches, and service
+                  providers in various fields.
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex mt-5 h-36 rounded-lg place-items-center p-5"
+              style="box-shadow: 0px 0px 16px #868686"
+            >
+              <div class="w-10 h-10 p-2 bg-red-600 rounded-full mr-5">
+                <span class="w-10 h-10">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-hard-drive text-white"
+                  >
+                    <line x1="22" x2="2" y1="12" y2="12" />
+                    <path
+                      d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"
+                    />
+                    <line x1="6" x2="6.01" y1="16" y2="16" />
+                    <line x1="10" x2="10.01" y1="16" y2="16" />
+                  </svg>
+                </span>
+              </div>
+              <div class="flex flex-col">
+                <h3 class="text-xl font-bold text-red-600">
+                  E-commerce Stores
+                </h3>
+                <p class="text-black text-sm">
+                  Increase online visibility and drive more traffic to your
+                  product pages.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===================================== CTA2 BTN ======================================= -->
+    <section
+      class="px-5 py-5 lg:flex lg:justify-between bg-red-600 lg:px-30 md:py-10"
+    >
+      <div class="text-white md:w-8/12">
+        <h2 class="text-4xl font-bold mb-4">Ready to Rank #1 on Google?</h2>
+        <p class="mb-4 text-2xl">
+          Start Your Journey with Our Expert SEO Services Today!
+        </p>
+        <div class="flex gap-10 md:9/12">
+          <p>
+            We make it possible to position your website at the top of the
+            search engine result page. And also we keep analyzing and updating
+            your
+          </p>
+          <p>
+            website every month. If you have any doubt or queries feel free to
+            contact us. We have to help you.
+          </p>
+        </div>
+      </div>
+
+      <a
+        href="#"
+        class="w-fit text-lg bg-white text-red-400 px-5 py-2 rounded-2xl flex h-10 mt-5 md:mt-0"
+        >Book Your Free Consultation Now!
+      </a>
+    </section>
+    <!-- ===================================== CTA2 BTN (END) ======================================= -->
+    <!-- =================================== WORK STEPS ============================================== -->
+    <section class="px-5 py-10 relative mx-auto md:py-20 md:px-15">
+      <h2 class="text-5xl font-bold text-red-600 my-14 text-center">
+        OUR WORK PROCESS
+      </h2>
+      <div class="md:px-52" id="work-process">
+        <ul>
+          <li>
+            <span class="bg-red-600 text-white font-bold">1</span>
+            <div class="">
+              <p class="text-red-600 text-lg md:text-2xl">
+                Data Collection & Analysis
+              </p>
+              <p class="text-white text-sm md:text-lg">
+                Gathering & analyzing data to inform strategies.
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="bg-red-600 text-white font-bold">2</span>
+            <div class="">
+              <p class="text-red-600 text-2xl">Tailored Strategy Development</p>
+              <p class="text-white">
+                Crafting a strategy tailored to your unique business goals.
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="bg-red-600 text-white font-bold">3</span>
+            <div class="">
+              <p class="text-red-600 text-2xl">Implementation Phase</p>
+              <p class="text-white">
+                Executing the strategy across chosen platforms.
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="bg-red-600 text-white font-bold">4</span>
+            <div class="">
+              <p class="text-red-600 text-2xl">Regular Progress Updates</p>
+              <p class="text-white">
+                Keep you informed with consistent progress reports.
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="bg-red-600 text-white font-bold">5</span>
+            <div class="">
+              <p class="text-red-600 text-2xl">Review & Optimization</p>
+              <p class="text-white">
+                Continuously optimizing campaigns for better results
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="bg-red-600 text-white font-bold">6</span>
+            <div class="">
+              <p class="text-red-600 text-2xl">Ongoing Support</p>
+              <p class="text-white">
+                Offering continous support and guidance for sustained success.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="hidden lg:flex absolute top-0 -left-30 -z-100 overflow-hidden over-data"
+      >
+        <div class="w-96 h-96 bg-red-200 rounded-full grid place-items-center">
+          <div
+            class="w-80 h-80 bg-red-300 rounded-full grid place-items-center"
+          >
+            <h2 class="ml-24 font-bold w-96 text-3xl text-clip">
+              BEST DIGITAL MARKETING SERVICE PROVIDER IN CHENNAI
+            </h2>
+          </div>
+        </div>
+        <div class="w-20 h-20 bg-red-200 rounded-full"></div>
+      </div>
+      <div
+        class="hidden lg:flex absolute bottom-0 -right-30 -z-100 overflow-hidden over-data"
+      >
+        <div
+          class="w-96 h-96 bg-red-200 rounded-full my-3 grid place-items-center"
+        >
+          <div class="w-80 h-80 bg-red-300 rounded-full"></div>
+        </div>
+        <div class="w-20 h-20 bg-red-200 rounded-full"></div>
+      </div>
+    </section>
+    <!-- =================================== WORK STEPS (END)============================================== -->
+    <!-- ===================================GOOGLE ============================================ -->
+    <div class="w-full h-96 bg-red-100"></div>
+    <!-- ===================================GOOGLE (END)============================================ -->
+    <!-- =====================================FORM ================================================== -->
+    <section class="px-5 py-10 relative mx-auto md:py-20 md:px-15">
+      <div class="flex flex-col py-10 md:flex-row md:py-20">
+        <div class="md:w-1/2">
+          <img src="../../asset/images/formsimg.jpg" alt="" />
+        </div>
+        <div class="md:w-1/2">
+          <form action="form" class="flex flex-col gap-5" onsubmit="">
+            <div class="flex gap-5 name">
+              <div class="first-name w-full flex flex-col">
+                <label
+                  for="firstname"
+                  class="text-red-600 text-xl font-semibold"
+                  >Firstname</label
+                >
+                <input
+                  type="text"
+                  name="firstname"
+                  id="firstname"
+                  placeholder="Enter your firstname"
+                  class="w-full py-3 px-2 border-2 border-red-300 rounded-xl"
+                />
+              </div>
+              <div class="second w-full flex flex-col">
+                <label for="lastname" class="text-red-600 text-xl font-semibold"
+                  >Lastname</label
+                >
+                <input
+                  type="text"
+                  name="lastname"
+                  id="lastname"
+                  placeholder="Enter your lastname"
+                  class="w-full py-3 px-2 border-2 border-red-300 rounded-xl"
+                />
+              </div>
+            </div>
+            <div class="mobile">
+              <label for="mobile" class="text-red-600 text-xl font-semibold"
+                >Mobile</label
+              >
+              <input
+                type="number"
+                name="mobile"
+                id="mobile"
+                placeholder="Enter your mobile number"
+                class="appearance-none [&::-webkit-inner-spin-button]:hidden [&::-webkit-outer-spin-button]:hidden w-full py-3 px-2 border-2 border-red-300 rounded-xl"
+              />
+            </div>
+            <div class="email">
+              <label for="email" class="text-red-600 text-xl font-semibold"
+                >Email / Businnes Name</label
+              >
+              <input
+                type="text"
+                name="email"
+                id="email"
+                placeholder="Enter your email /Businnes Name"
+                class="w-full py-3 px-2 border-2 border-red-300 rounded-xl"
+              />
+            </div>
+            <div class="businnes">
+              <label for="businnes" class="text-red-600 text-xl font-semibold"
+                >Your Website Link?</label
+              >
+              <input
+                type="text"
+                name="businnes"
+                id="businnes"
+                placeholder="Enter your businnes URL"
+                class="w-full py-3 px-2 border-2 border-red-300 rounded-xl"
+              />
+            </div>
+            <div class="relative inline-block text-left w-full services">
+              <label for="businnes" class="text-red-600 text-xl font-semibold"
+                >Which Service Are You Looking For?
+              </label>
+
+              <div
+                id="selected-options"
+                class="py-3 px-2 rounded-xl min-h-[40px] flex flex-wrap"
+              >
+                <span class="text-gray-500"></span>
+              </div>
+              <div class="relative inline-block text-left w-64">
+                <a
+                  onclick="toggleDropdown()"
+                  class="w-full border p-2 border-red-600 rounded focus:ring-2 focus:ring-red-500 flex justify-between items-center"
+                >
+                  Select Services
+                  <span>&#9662;</span>
+                </a>
+
+                <!-- Dropdown Menu -->
+                <div
+                  id="dropdown-menu"
+                  class="absolute w-full mt-2 bg-white shadow-md hidden"
+                >
+                  <div id="dropdown-options">
+                    <!-- Options will be inserted dynamically -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="package">
+              <h2 class="text-lg font-semibold mb-3">Your Marketing Budget?</h2>
+
+              <!-- Option 1 -->
+              <label class="flex items-center p-2 cursor-pointer transition">
+                <input
+                  type="checkbox"
+                  name="budget"
+                  value="35k to 50k"
+                  class="budget-checkbox hidden"
+                />
+                <div
+                  class="w-5 h-5 flex justify-center items-center border-2 border-gray-400 rounded transition-colors mr-3"
+                >
+                  <span class="hidden text-white font-bold">✔</span>
+                </div>
+                <span>35k to 50k</span>
+              </label>
+
+              <!-- Option 2 -->
+              <label
+                class="flex items-center p-2 cursor-pointer mt-2 transition"
+              >
+                <input
+                  type="checkbox"
+                  name="budget"
+                  value="50k to 1L"
+                  class="budget-checkbox hidden"
+                />
+                <div
+                  class="w-5 h-5 flex justify-center items-center border-2 border-gray-400 rounded transition-colors mr-3"
+                >
+                  <span class="hidden text-white font-bold">✔</span>
+                </div>
+                <span>50k to 1L</span>
+              </label>
+
+              <!-- Option 3 -->
+              <label
+                class="flex items-center p-2 cursor-pointer mt-2 transition"
+              >
+                <input
+                  type="checkbox"
+                  name="budget"
+                  value="1L to 2L"
+                  class="budget-checkbox hidden"
+                />
+                <div
+                  class="w-5 h-5 flex justify-center items-center border-2 border-gray-400 rounded transition-colors mr-3"
+                >
+                  <span class="hidden text-white font-bold">✔</span>
+                </div>
+                <span>1L to 2L</span>
+              </label>
+            </div>
+            <div class="problem">
+              <label for="problem" class="text-red-600 text-xl font-semibold"
+                >What kind of problem you are facing in your business?</label
+              >
+              <input
+                type="text"
+                name="problem"
+                id="problem"
+                class="w-full py-3 px-2 border-2 border-red-300 rounded-xl"
+              />
+            </div>
+            <div class="submit">
+              <button
+                type="submit"
+                class="w-fit bg-red-600 text-white py-3 px-10 rounded-xl"
+              >
+                Submit
+              </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- =====================================FORM (END)================================================== -->
+    <!-- ==================================DID YOU KNOW ====================================== -->
+    <section class="px-5 py-10 relative mx-auto md:py-20 md:px-15">
+      <img src="../../asset/images/didyou.png" alt="" />
+    </section>
+    <!-- ==================================DID YOU KNOW (END)====================================== -->
+    <!-- script -->
+    <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="../../asset/js/script.js"></script>
+    <script>
+      const mobileMenu = () => {
+        const menu = document.getElementById("mobile-Menu");
+
+        if (menu.classList.contains("hidden ")) {
+          menu.classList.remove("hidden");
+        } else {
+          menu.classList.add("hidden");
+        }
+      };
+      function toggleDropdown() {
+        document.getElementById("dropdown-menu").classList.toggle("hidden");
+      }
+
+      const services = [
+        "Web Development",
+        "Graphic Design",
+        "SEO Optimization",
+        "Content Writing",
+        "Digital Marketing",
+        "Mobile App Development",
+        "Cyber Security",
+        "Cloud Computing",
+        "AI & Machine Learning",
+        "Blockchain Development",
+        "E-commerce Solutions",
+        "IT Consulting",
+      ];
+
+      const dropdownMenu = document.getElementById("dropdown-menu");
+      const dropdownOptions = document.getElementById("dropdown-options");
+      const selectedOptionsBox = document.getElementById("selected-options");
+
+      // Toggle Dropdown Visibility
+      function toggleDropdown() {
+        dropdownMenu.classList.toggle("hidden");
+      }
+
+      // Render Dropdown Options
+      function renderDropdown() {
+        dropdownOptions.innerHTML = "";
+        services.forEach((service) => {
+          const option = document.createElement("label");
+          option.className =
+            "flex items-center p-2 hover:bg-gray-100 cursor-pointer";
+          option.innerHTML = `
+              <input type="checkbox" value="${service}" class="mr-2 option-checkbox"> ${service}
+            `;
+          dropdownOptions.appendChild(option);
+        });
+
+        // Add Event Listeners
+        document.querySelectorAll(".option-checkbox").forEach((checkbox) => {
+          checkbox.addEventListener("change", (e) => handleSelection(e.target));
+        });
+      }
+
+      // Handle Selection
+      function handleSelection(checkbox) {
+        if (checkbox.checked) {
+          addSelectedOption(checkbox.value);
+          checkbox.parentElement.classList.add("hidden"); // Hide selected option
+        }
+      }
+
+      // Add Selected Option
+      function addSelectedOption(service) {
+        if (selectedOptionsBox.querySelector(".text-gray-500")) {
+          selectedOptionsBox.innerHTML = ""; // Remove placeholder text
+        }
+
+        const selectedItem = document.createElement("div");
+        selectedItem.className =
+          "flex items-center bg-red-500 text-white px-2 py-1 rounded m-1";
+        selectedItem.innerHTML = `
+            <span class="border-r border-gray pr-2">${service}</span>
+            <button onclick="removeSelectedOption('${service}', this)" class="ml-2 bg-gray-100 text-black  px-2 rounded-full text-xs py-1 "><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+          `;
+
+        selectedOptionsBox.appendChild(selectedItem);
+      }
+
+      // Remove Selected Option
+      function removeSelectedOption(service, button) {
+        button.parentElement.remove(); // Remove selected item
+
+        // Unhide the option in the dropdown
+        document.querySelectorAll(".option-checkbox").forEach((checkbox) => {
+          if (checkbox.value === service) {
+            checkbox.parentElement.classList.remove("hidden");
+            checkbox.checked = false;
+          }
+        });
+
+        // Show placeholder if no selected items
+        if (selectedOptionsBox.childElementCount === 0) {
+          selectedOptionsBox.innerHTML = `<span class="text-gray-500"></span>`;
+        }
+      }
+
+      // Initialize Dropdown
+      renderDropdown();
+      // ckeck box
+      const checkboxes = document.querySelectorAll(".budget-checkbox");
+      const checkDivs = document.querySelectorAll("label div");
+
+      checkboxes.forEach((checkbox, index) => {
+        checkbox.addEventListener("change", () => {
+          checkboxes.forEach((cb, i) => {
+            if (cb !== checkbox) {
+              cb.checked = false;
+              checkDivs[i].classList.remove("bg-red-500", "border-red-500");
+              checkDivs[i].children[0].classList.add("hidden");
+            }
+          });
+
+          if (checkbox.checked) {
+            checkDivs[index].classList.add("bg-red-500", "border-red-500");
+            checkDivs[index].children[0].classList.remove("hidden");
+          } else {
+            checkDivs[index].classList.remove("bg-red-500", "border-red-500");
+            checkDivs[index].children[0].classList.add("hidden");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

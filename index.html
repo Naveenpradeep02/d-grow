@@ -8,7 +8,7 @@
     <link rel="shotcut icon" href="./asset/images/d-grow-footer.png" />
 
     <!-- =============== js ======================== -->
-
+    <!-- tailwind -->
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <script
       defer
@@ -21,18 +21,18 @@
     <!-- =============== js (END) ======================== -->
     <title>D-Grow</title>
   </head>
-  <body class="">
+  <body class="overflow-x-hidden">
     <!-- ===================================== NAVIGATION BAR ======================================= -->
 
-    <section class="bg-red-600 rounded-2xl m-10 p-5 sticky top-0 z-50">
+    <section class="bg-red-600 rounded-2xl m-2 p-5 sticky top-0 z-40 md:m-10">
       <div class="container mx-auto">
         <!-- navbar -->
         <div class="flex">
           <a href="#" class="logo-imgs w-44 pr-5 border-r mr-5 border-red-900">
-            <img src="./asset/images/d-growlogo.png" alt="" />
+            <img class="w-44" src="./asset/images/d-growlogo.png" alt="" />
           </a>
           <div class="my-auto">
-            <button class="lg:hidden">
+            <button class="lg:hidden" onclick="mobileMenu()">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -48,13 +48,9 @@
                 />
               </svg>
             </button>
-            <ul class="font-bold text-white hidden md:flex">
+            <ul class="font-bold text-white hidden lg:flex">
               <li class="pr-5">
-                <a
-                  class="px-3 py-2 text-black border-y-2 border-y-white"
-                  href="#"
-                  >Home</a
-                >
+                <a class="px-3 py-2 text-black" href="#">Home</a>
               </li>
               <li class="pr-5">
                 <a class="px-3 py-2 hover:border-b-2" href="#">About</a>
@@ -62,13 +58,12 @@
               <li class="pr-5">
                 <button
                   class="px-3 pb-2 hover:border-b-2"
-                  type="button"
                   data-dropdown-toggle="dropdown"
                 >
                   Services
                 </button>
                 <div
-                  class="hidden bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-4"
+                  class="hidden bg-white text-base z-5 list-none divide-y divide-gray-100 rounded shadow my-4"
                   id="dropdown"
                 >
                   <ul class="py-1" aria-labelledby="dropdown">
@@ -88,7 +83,7 @@
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="./pages/services/seo.html"
                         class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
                         >SEO</a
                       >
@@ -117,7 +112,11 @@
                 <a class="px-3 py-2 hover:border-b-2" href="#">Blog</a>
               </li>
               <li class="pr-5">
-                <a class="px-3 py-2 hover:border-b-2" href="#">Contacts</a>
+                <a
+                  class="px-3 py-2 hover:border-b-2"
+                  href="./pages/contact.html"
+                  >Contacts</a
+                >
               </li>
             </ul>
           </div>
@@ -125,12 +124,14 @@
           <a
             href="#"
             class="ml-auto my-auto text-medium bg-white text-red-400 px-3 py-2 rounded-2xl flex h-10 hover:bg-green-500 hover:text-white border-none"
-            ><span class="px-2 hidden lg:block">MEDGROW</span>
+            ><span class="px-2 text-sm md:text-xl">MEDGROW</span>
           </a>
         </div>
         <!-- moblie nav bar -->
-        <div class="">
-          <ul class="font-bold text-white md:hidden">
+        <div class="hidden" id="mobile-Menu">
+          <ul
+            class="font-bold text-white mt-10 grid place-items-center lg:hidden"
+          >
             <li class="mt-2">
               <a class="py-2" href="#">Home</a>
             </li>
@@ -138,54 +139,7 @@
               <a class="py-2" href="#">About</a>
             </li>
             <li class="mt-2">
-              <button
-                class="py-0"
-                type="button"
-                data-dropdown-toggle="dropdown"
-              >
-                Services
-              </button>
-              <div
-                class="hidden bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-4"
-                id="dropdown"
-              >
-                <div class="px-4 py-3">
-                  <span class="block text-sm">Bonnie Green</span>
-                  <span class="block text-sm font-medium text-gray-900 truncate"
-                    >name@flowbite.com</span
-                  >
-                </div>
-                <ul class="py-1" aria-labelledby="dropdown">
-                  <li>
-                    <a
-                      href="#"
-                      class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
-                      >Dashboard</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
-                      >Settings</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
-                      >Earnings</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
-                      >Sign out</a
-                    >
-                  </li>
-                </ul>
-              </div>
+              <a class="py-2" href="./pages/services/service.html">Services</a>
             </li>
             <li class="mt-2">
               <a class="py-2" href="#">Case study</a>
@@ -193,8 +147,10 @@
             <li class="mt-2">
               <a class="py-2" href="#">Blog</a>
             </li>
-            <li class="pr-5">
-              <a class="px-3 py-2 hover:border-b-2" href="#">Contacts</a>
+            <li class="mt-2">
+              <a class="py-2 hover:border-b-2" href="./pages/contact.html"
+                >Contacts</a
+              >
             </li>
           </ul>
         </div>
@@ -204,17 +160,23 @@
 
     <!-- ===================================== HERO SECTION ======================================= -->
 
-    <section id="hero" class="px-15 py-5 relative mx-auto">
-      <!-- hero section -->
-      <div class="flex py-10 text-red-600">
-        <div class="pt-20 pl-2 w-1/2">
-          <h2 class="text-5xl font-bold mb-1">Drive Sales For Your Business</h2>
-          <h2 class="text-4xl font-bold mb-1">
+    <section
+      id="hero"
+      class="px-5 py-5 relative mx-auto md:px-15 md:py-5 lg:overflow-visible"
+    >
+      <div
+        class="flex flex-col-reverse py-10 text-red-600 md:flex-row md:py-20"
+      >
+        <div class="pt-20 pl-2 w-full md:w-1/2">
+          <h2 class="text-3xl font-bold mb-1 md:text-5xl md:mb-5">
+            Drive Sales For Your Business
+          </h2>
+          <h2 class="text-xl font-bold mb-1 md:text-4xl md:mb-5">
             Strategic
             <span class="auto-type text-black"> </span>
             <br />Service In Chennai
           </h2>
-          <p class="my-8 text-2xl">
+          <p class="my-2 text-lg md:text-2xl">
             We Provide Scalable Digital Marketing Solutions To Help You Achieve
             Your Business Goals.
           </p>
@@ -224,15 +186,15 @@
             >
           </div>
         </div>
-        <div class="w-1/2">
+        <div class="w-full md:w-1/2">
           <img class="" src="./asset/images/hero-vector-d-grow.png" alt="" />
         </div>
       </div>
-      <div class="absolute -left-20 top-1/2 -z-10">
+      <div class="hidden lg:block absolute -left-20 top-1/2 -z-10">
         <div class="w-60 h-60 bg-red-100 rounded-full"></div>
         <div class="w-20 h-20 bg-red-100 rounded-full"></div>
       </div>
-      <div class="absolute -right-20 -top-40 -z-10">
+      <div class="hidden lg:block absolute -right-20 -top-40 -z-10 over-data">
         <div class="w-60 h-60 bg-red-100 rounded-full"></div>
         <div class="w-20 h-20 bg-red-100 rounded-full"></div>
       </div>
@@ -240,11 +202,15 @@
     <!-- ===================================== HERO SECTION (END)======================================= -->
 
     <!-- ===================================== CTA BTN ======================================= -->
-    <section class="flex justify-between bg-red-600 px-40 py-10">
-      <h2 class="text-5xl font-bold text-white">Get Your Free Website Audit</h2>
+    <section
+      class="px-5 py-5 lg:flex lg:justify-between bg-red-600 lg:px-30 md:py-10"
+    >
+      <h2 class="text-3xl font-bold text-white md:text-5xl">
+        Get Your Free Website Audit
+      </h2>
       <a
         href="#"
-        class="text-lg bg-white text-red-400 px-3 py-2 rounded-2xl flex h-10"
+        class="text-lg bg-white text-red-400 px-3 py-2 rounded-2xl flex h-10 w-fit mt-10 md:mt-0"
         >Check Now
       </a>
     </section>
@@ -255,8 +221,9 @@
       <section
         class="relative flex flex-col justify-center bg-red-50 overflow-hidden"
       >
-        <div class="w-full max-w-5xl mx-auto px-4 md:px-6 py-24">
-          <!-- Animated Number Counter -->
+        <div
+          class="w-full max-w-5xl mx-auto px-4 md:px-6 py-24 flex flex-col items-center"
+        >
           <main class="grid gap-12 md:grid-cols-4 md:gap-16">
             <!-- Block #1 -->
             <article>
@@ -455,20 +422,23 @@
               </p>
             </article>
           </main>
-          <!-- End: Animated Number Counter -->
         </div>
       </section>
     </div>
     <!--========================================== counter section  (END) ============================-->
 
     <!-- =========================================  section 1 ============================================ -->
-    <section class="flex px-15 py-5 relative mx-auto">
-      <div class="w-1/2 flex justify-center align-middle flex-col relative">
-        <h2 class="text-5xl font-bold mb-5 text-red-600">
+    <section
+      class="flex flex-col-reverse px-5 py-10 text-red-600 md:flex-row md:py-20 md:px-15"
+    >
+      <div
+        class="w-full md:w-1/2 flex justify-center align-middle flex-col relative"
+      >
+        <h2 class="text-3xl md:text-5xl font-bold mb-5 text-red-600">
           Measure Your Revenue - Your Prominent Digital Marketing Partner In
           Chennai
         </h2>
-        <p class="text-xl text-justify pb-10">
+        <p class="text-sm md:text-xl text-justify pb-10">
           10X your ROI with D-Grow Marketing Agency - the ultimate partner for
           businesses seeking comprehensive digital marketing services in Chenai,
           India. With our expertly designed digital marketing solutions, your
@@ -478,26 +448,28 @@
         </p>
         <div class="w-28 h-1 bg-red-600 mx-auto"></div>
       </div>
-      <div class="w-1/2">
+      <div class="w-full md:w-1/2">
         <img src="./asset/images/section1-side-img-dgrow.png" alt="" />
       </div>
     </section>
     <!-- =========================================  section 1 (END)============================================ -->
     <!-- ===================================== CTA2 BTN ======================================= -->
-    <section class="flex justify-between align-middle bg-red-600 px-40 py-10">
+    <section
+      class="px-5 py-5 lg:flex lg:justify-between bg-red-600 lg:px-30 md:py-10"
+    >
       <h2 class="text-3xl font-bold text-white">
         Elevate Your Brand Reach New Heights And <br />
         Conquer The Competition Today!
       </h2>
       <a
         href="#"
-        class="w-fit text-lg bg-white text-red-400 px-5 py-2 rounded-2xl flex h-10"
+        class="w-fit text-lg bg-white text-red-400 px-5 py-2 rounded-2xl flex h-10 mt-5 md:mt-0"
         >Book Your Free Consultation Now!
       </a>
     </section>
     <!-- ===================================== CTA2 BTN (END) ======================================= -->
     <!-- ====================================SECTION2 ============================================= -->
-    <section class="px-15 py-5 relative mx-auto">
+    <section class="px-5 py-10 relative mx-auto md:py-20 md:px-15">
       <h2 class="text-5xl text-center py-10 text-red-600">
         Why Choose D-Grow Marketing Agency In Chennai?
       </h2>
@@ -672,87 +644,87 @@
     </section>
     <!-- ====================================SECTION2 (END)============================================= -->
     <!-- =================================== WORK STEPS ============================================== -->
-    <section class="px-15 py-5 relative mx-auto">
+    <section class="px-5 py-10 relative mx-auto md:py-20 md:px-15">
       <h2 class="text-5xl font-bold text-red-600 my-14 text-center">
         OUR WORK PROCESS
       </h2>
-      <div class="px-52" id="work-process">
+      <div class="md:px-52" id="work-process">
         <ul>
           <li>
             <span class="bg-red-600 text-white font-bold">1</span>
             <div class="">
-              <p class="text-red-600 text-2xl">Lorem ipsum dolor sit amet.</p>
-              <p class="text-white">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum
-                iste modi iusto labore voluptatibus vel.
+              <p class="text-red-600 text-lg md:text-2xl">
+                Data Collection & Analysis
+              </p>
+              <p class="text-white text-sm md:text-lg">
+                Gathering & analyzing data to inform strategies.
               </p>
             </div>
           </li>
           <li>
             <span class="bg-red-600 text-white font-bold">2</span>
             <div class="">
-              <p class="text-red-600 text-2xl">Lorem ipsum dolor sit amet.</p>
+              <p class="text-red-600 text-2xl">Tailored Strategy Development</p>
               <p class="text-white">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum
-                iste modi iusto labore voluptatibus vel.
+                Crafting a strategy tailored to your unique business goals.
               </p>
             </div>
           </li>
           <li>
             <span class="bg-red-600 text-white font-bold">3</span>
             <div class="">
-              <p class="text-red-600 text-2xl">Lorem ipsum dolor sit amet.</p>
+              <p class="text-red-600 text-2xl">Implementation Phase</p>
               <p class="text-white">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum
-                iste modi iusto labore voluptatibus vel.
+                Executing the strategy across chosen platforms.
               </p>
             </div>
           </li>
           <li>
             <span class="bg-red-600 text-white font-bold">4</span>
             <div class="">
-              <p class="text-red-600 text-2xl">Lorem ipsum dolor sit amet.</p>
+              <p class="text-red-600 text-2xl">Regular Progress Updates</p>
               <p class="text-white">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum
-                iste modi iusto labore voluptatibus vel.
+                Keep you informed with consistent progress reports.
               </p>
             </div>
           </li>
           <li>
             <span class="bg-red-600 text-white font-bold">5</span>
             <div class="">
-              <p class="text-red-600 text-2xl">Lorem ipsum dolor sit amet.</p>
+              <p class="text-red-600 text-2xl">Review & Optimization</p>
               <p class="text-white">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum
-                iste modi iusto labore voluptatibus vel.
+                Continuously optimizing campaigns for better results
               </p>
             </div>
           </li>
           <li>
             <span class="bg-red-600 text-white font-bold">6</span>
             <div class="">
-              <p class="text-red-600 text-2xl">Lorem ipsum dolor sit amet.</p>
+              <p class="text-red-600 text-2xl">Ongoing Support</p>
               <p class="text-white">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum
-                iste modi iusto labore voluptatibus vel.
+                Offering continous support and guidance for sustained success.
               </p>
             </div>
           </li>
         </ul>
       </div>
-      <div class="flex absolute top-0 -left-30 -z-100">
+      <div
+        class="hidden lg:flex absolute top-0 -left-30 -z-100 overflow-hidden over-data"
+      >
         <div class="w-96 h-96 bg-red-200 rounded-full grid place-items-center">
           <div
             class="w-80 h-80 bg-red-300 rounded-full grid place-items-center"
           >
-            <h2 class="ml-24 font-bold w-96 text-3xl text-clip text-stoke">
-              BEST DIGITAL MARKETING IN CHENNAI
+            <h2 class="ml-24 font-bold w-96 text-3xl text-clip">
+              BEST DIGITAL MARKETING SERVICE PROVIDER IN CHENNAI
             </h2>
           </div>
         </div>
         <div class="w-20 h-20 bg-red-200 rounded-full"></div>
       </div>
-      <div class="flex absolute bottom-0 -right-30 -z-100">
+      <div
+        class="hidden lg:flex absolute bottom-0 -right-30 -z-100 overflow-hidden over-data"
+      >
         <div
           class="w-96 h-96 bg-red-200 rounded-full my-3 grid place-items-center"
         >
@@ -763,21 +735,23 @@
     </section>
     <!-- =================================== WORK STEPS (END)============================================== -->
     <!-- ===================================== CTA2 BTN ======================================= -->
-    <section class="flex justify-between align-middle bg-red-600 px-40 py-10">
-      <h2 class="text-3xl font-bold text-white">
+    <section
+      class="px-5 py-5 lg:flex lg:justify-between bg-red-600 lg:px-30 md:py-10"
+    >
+      <h2 class="text-2xl md:text-3xl font-bold text-white">
         Maximize Your ROI & Reach Your Business Goal <br />
         With Our Professional Digital Marketing Solutions!
       </h2>
       <a
         href="#"
-        class="w-fit text-lg bg-white text-red-400 px-5 py-2 rounded-2xl flex h-10"
+        class="w-fit text-lg bg-white text-red-400 px-5 py-2 rounded-2xl flex h-10 mt-5 md:mt-0"
         >Let's 10X Your Business!
       </a>
     </section>
     <!-- ===================================== CTA2 BTN (END) ======================================= -->
     <!--====================================MEDGROW pranding =========================================================-->
     <section
-      class="px-15 py-15 relative mx-auto bg-red-50 grid place-items-center h-lvh"
+      class="px-5 py-10 relative mx-auto md:py-20 md:px-15 bg-red-50 grid place-items-center h-lvh"
     >
       <div class="circle">
         <div class="grid place-items-center circle-logo">
@@ -802,7 +776,7 @@
     <!--====================================MEDGROW pranding (END)=========================================================-->
 
     <!-- ==================================== CARD ========================================================= -->
-    <section class="px-15 py-5 relative mx-auto">
+    <section class="px-5 py-10 relative mx-auto md:py-20 md:px-15">
       <h2 class="text-5xl font-bold text-red-600 my-14 text-center">
         Sneak peak of the industries we served:
       </h2>
@@ -936,7 +910,7 @@
     </section>
     <!-- ==================================== CARD (END)========================================================= -->
     <!-- =================================== What My Clients Says ====================================== -->
-    <section class="px-5 py-5 relative mx-auto">
+    <section class="px-5 py-10 relative mx-auto md:py-20 md:px-15">
       <div
         class="relative bg-gray-50 px-6 pt-16 pb-20 lg:px-8 lg:pt-24 lg:pb-28"
       >
@@ -1065,8 +1039,10 @@
     </section>
     <!-- =================================== What My Clients Says (END)====================================== -->
     <!-- ===================================== CTA2 BTN ======================================= -->
-    <section class="flex justify-between align-middle bg-red-600 px-40 py-10">
-      <h2 class="text-3xl font-bold text-white">
+    <section
+      class="px-5 py-5 lg:flex lg:justify-between bg-red-600 lg:px-30 md:py-10"
+    >
+      <h2 class="text-2xl md:text-3xl font-bold text-white">
         Maximize Your ROI & Reach Your Business Goal With <br />
         Our Professional Digital Marketing Solutions!
         <span class="text-sm text-white block">
@@ -1078,13 +1054,13 @@
       </h2>
       <a
         href="#"
-        class="w-fit text-lg bg-white text-red-400 px-5 py-2 rounded-2xl flex h-10"
+        class="w-fit text-lg bg-white text-red-400 px-5 py-2 rounded-2xl flex h-10 mt-5 md:mt-0"
         >Let's 10X Your Business!
       </a>
     </section>
     <!-- ===================================== CTA2 BTN (END) ======================================= -->
     <!-- ===================================== Faq ================================================== -->
-    <section class="px-5 py-5 relative mx-auto">
+    <section class="px-5 py-10 relative mx-auto md:py-20 md:px-15">
       <section
         x-data="
    {
@@ -1472,14 +1448,16 @@
     </section>
     <!-- ===================================== Faq (END)================================================== -->
     <!-- ===================================== CTA2 BTN ======================================= -->
-    <section class="flex justify-between align-middle bg-red-600 px-40 py-10">
-      <h2 class="text-3xl font-bold text-white">
+    <section
+      class="px-5 py-5 lg:flex lg:justify-between bg-red-600 lg:px-30 md:py-10"
+    >
+      <h2 class="text-2xl md:text-3xl font-bold text-white">
         Partner with us to elevate your online presence and <br />
         drive success in the digital realm.
       </h2>
       <a
         href="#"
-        class="w-fit text-lg bg-white text-red-400 px-5 py-2 rounded-2xl flex h-10"
+        class="w-fit text-lg bg-white text-red-400 px-5 py-2 rounded-2xl flex h-10 mt-5 md:mt-0"
         >Hire Us!
       </a>
     </section>
@@ -1487,8 +1465,10 @@
     <!-- ===================================== CTA2 BTN (END) ======================================= -->
 
     <!-- ===================================== Footer ======================================= -->
-    <footer class="bg-black text-white grid grid-cols-3 gap-4 px-14 pt-14 pb-4">
-      <div class="pl-20">
+    <footer
+      class="bg-black text-white grid grid-cols-1 px-14 pt-14 pb-4 md:grid-cols-3 gap-4"
+    >
+      <div class="md:pl-20">
         <img src="./asset/images/d-grow-footer.png" alt="" />
         <p class="text-xl font-semibold pl-2 mt-3">
           Elevating Brands, Driving Growth with innovation and creativity, we
@@ -1510,22 +1490,24 @@
           </p></a
         >
       </div>
-      <div class="pr-28">
+      <div class="md:pr-28">
         <ul class="flex flex-col gap-3">
-          <li class="text-xl font-semibold text-end"><a href="#">Home</a></li>
-          <li class="text-xl font-semibold text-end">
+          <li class="text-xl font-semibold text-center md:text-end">
+            <a href="#">Home</a>
+          </li>
+          <li class="text-xl font-semibold text-center md:text-end">
             <a href="#">About Us</a>
           </li>
-          <li class="text-xl font-semibold text-end">
+          <li class="text-xl font-semibold text-center md:text-end">
             <a href="#">Services</a>
           </li>
-          <li class="text-xl font-semibold text-end">
+          <li class="text-xl font-semibold text-center md:ext-end">
             <a href="#">SEO Service</a>
           </li>
-          <li class="text-xl font-semibold text-end">
+          <li class="text-xl font-semibold text-center md:text-end">
             <a href="#">Social Media Marketing</a>
           </li>
-          <li class="text-xl font-semibold text-end">
+          <li class="text-xl font-semibold text-center md:text-end">
             <a href="#">Contact Us</a>
           </li>
         </ul>
@@ -1607,6 +1589,17 @@
     <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="./asset/js/script.js"></script>
+    <script>
+      const mobileMenu = () => {
+        const menu = document.getElementById("mobile-Menu");
+
+        if (menu.classList.contains("hidden")) {
+          menu.classList.remove("hidden");
+        } else {
+          menu.classList.add("hidden");
+        }
+      };
+    </script>
     <!-- ================================================== script (ENDS)========================================= -->
   </body>
 </html>

@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- =============== CSS ======================== -->
+    <link rel="stylesheet" href="../asset/css/style.css" />
+    <link rel="shotcut icon" href="../asset/images/d-grow-footer.png" />
+
+    <!-- =============== js ======================== -->
+    <!-- tailwind -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <!-- =============== js (END) ======================== -->
+    <title>D-Grow</title>
+  </head>
+  <body class="overflow-x-hidden">
+    <div class="bg-red-100">
+      <!-- ===================================== NAVIGATION BAR ======================================= -->
+
+      <section class="bg-red-600 rounded-2xl m-2 p-5 sticky top-0 z-40 md:m-10">
+        <div class="container mx-auto">
+          <!-- navbar -->
+          <div class="flex">
+            <a
+              href="#"
+              class="logo-imgs w-44 pr-5 border-r mr-5 border-red-900"
+            >
+              <img class="w-44" src="../asset/images/d-growlogo.png" alt="" />
+            </a>
+            <div class="my-auto">
+              <button class="lg:hidden" onclick="mobileMenu()">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+              </button>
+              <ul class="font-bold text-white hidden lg:flex">
+                <li class="pr-5">
+                  <a class="px-3 py-2 text-black" href="../index.html">Home</a>
+                </li>
+                <li class="pr-5">
+                  <a class="px-3 py-2 hover:border-b-2" href="#">About</a>
+                </li>
+                <li class="pr-5">
+                  <button
+                    class="px-3 pb-2 hover:border-b-2"
+                    data-dropdown-toggle="dropdown"
+                  >
+                    Services
+                  </button>
+                  <div
+                    class="hidden bg-white text-base z-5 list-none divide-y divide-gray-100 rounded shadow my-4"
+                    id="dropdown"
+                  >
+                    <ul class="py-1" aria-labelledby="dropdown">
+                      <li>
+                        <a
+                          href="#"
+                          class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                          >SMM</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                          >Lead Generate</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="../pages/services/seo.html"
+                          class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                          >SEO</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                          >Website Designing</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                          >Branding</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="pr-5">
+                  <a class="px-3 py-2 hover:border-b-2" href="#">Case study</a>
+                </li>
+                <li class="pr-5">
+                  <a class="px-3 py-2 hover:border-b-2" href="#">Blog</a>
+                </li>
+                <li class="pr-5">
+                  <a class="px-3 py-2 hover:border-b-2" href="#">Contacts</a>
+                </li>
+              </ul>
+            </div>
+
+            <a
+              href="#"
+              class="ml-auto my-auto text-medium bg-white text-red-400 px-3 py-2 rounded-2xl flex h-10 hover:bg-green-500 hover:text-white border-none"
+              ><span class="px-2 text-sm md:text-xl">MEDGROW</span>
+            </a>
+          </div>
+          <!-- moblie nav bar -->
+          <div class="hidden" id="mobile-Menu">
+            <ul
+              class="font-bold text-white mt-10 grid place-items-center lg:hidden"
+            >
+              <li class="mt-2">
+                <a class="py-2" href="../index.html">Home</a>
+              </li>
+              <li class="mt-2">
+                <a class="py-2" href="#">About</a>
+              </li>
+              <li class="mt-2">
+                <a class="py-2" href="./pages/services/service.html"
+                  >Services</a
+                >
+              </li>
+              <li class="mt-2">
+                <a class="py-2" href="#">Case study</a>
+              </li>
+              <li class="mt-2">
+                <a class="py-2" href="#">Blog</a>
+              </li>
+              <li class="mt-2">
+                <a class="py-2 hover:border-b-2" href="#">Contacts</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- ===================================== NAVIGATION BAR (END)======================================= -->
+      <!-- ==================================== SERVICE HEADER ============================================ -->
+      <section class="rounded-2xl p-5 h-96">
+        <div class="container mx-auto">
+          <div class="flex flex-col items-center">
+            <h1 class="text-8xl font-bold text-black pt-20">Contact</h1>
+          </div>
+        </div>
+      </section>
+      <!-- ==================================== SERVICE HEADER (END)============================================ -->
+    </div>
+    <!-- =====================================FORM ================================================== -->
+    <section class="px-5 py-10 relative mx-auto md:py-0 md:px-15">
+      <div class="flex flex-col py-10 md:flex-row md:py-20">
+        <div class="md:w-1/2 flex flex-col gap-5 items-center">
+          <h2 class="text-5xl font-bold text-red-600 text-center">
+            Connect with Us Today!
+          </h2>
+          <div
+            class="bg-red-600 w-60 h-60 rounded-full mt-10 flex place-items-center justify-center overflow-hidden"
+          >
+            <img
+              class="w-32 h-32 object-cover"
+              src="../asset/images/d-grow-footer.png"
+              alt=""
+            />
+          </div>
+          <h2 class="text-2xl font-bold text-red-600 text-center">
+            D-Grow Marketing Agency
+            <br />
+            in Chennai
+          </h2>
+          <div class="flex gap-5 justify-center social-media">
+            <div
+              class="border-2 border-red-600 p-2 rounded-full hover:border-black transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-facebook text-red-600"
+              >
+                <path
+                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                />
+              </svg>
+            </div>
+            <div
+              class="border-2 border-red-600 p-2 rounded-full hover:border-black transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-instagram text-red-600"
+              >
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+              </svg>
+            </div>
+            <div
+              class="border-2 border-red-600 p-2 rounded-full hover:border-black transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-linkedin text-red-600"
+              >
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                />
+                <rect width="4" height="12" x="2" y="9" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </div>
+          </div>
+          <div class="buttons flex flex-col items-center">
+            <a
+              href="#"
+              class="bg-red-600 text-white py-3 px-10 rounded-full block text-center mt-5 w-72 text-lg font-semibold"
+              >Meet Us</a
+            >
+            <a
+              href="#"
+              class="bg-red-600 text-white py-3 px-10 rounded-full block text-center mt-5 w-72 text-lg font-semibold"
+              >WhatsApp
+            </a>
+            <a
+              href="#"
+              class="bg-red-600 text-white py-3 px-10 rounded-full block text-center mt-5 w-72 text-lg font-semibold"
+              >Hire Me
+            </a>
+            <a
+              href="#"
+              class="bg-red-600 text-white py-3 px-10 rounded-full block text-center mt-5 w-72 text-lg font-semibold"
+            >
+              Call Me
+            </a>
+            <a
+              href="#"
+              class="bg-red-600 text-white py-3 px-10 rounded-full block text-center mt-5 w-72 text-lg font-semibold"
+            >
+              Email Me
+            </a>
+          </div>
+        </div>
+        <div class="md:w-1/2">
+          <form
+            id="myForm"
+            action="https://script.google.com/macros/s/AKfycbx92ILjBr9iMadEeCQX6ch3CuUhM5MHxJUCwhCCYwthecOXZUu78ox1rT4X7PVFISUtog/exec"
+            class="flex flex-col gap-5"
+          >
+            <div class="flex gap-5 name">
+              <div class="first-name w-full flex flex-col">
+                <label
+                  for="firstname"
+                  class="text-red-600 text-xl font-semibold"
+                  >Firstname</label
+                >
+                <input
+                  type="text"
+                  name="firstname"
+                  required
+                  id="firstname"
+                  placeholder="Enter your firstname"
+                  class="w-full py-3 px-2 border-2 border-red-300 rounded-xl"
+                />
+              </div>
+              <div class="second w-full flex flex-col">
+                <label for="lastname" class="text-red-600 text-xl font-semibold"
+                  >Lastname</label
+                >
+                <input
+                  type="text"
+                  name="lastname"
+                  id="lastname"
+                  placeholder="Enter your lastname"
+                  class="w-full py-3 px-2 border-2 border-red-300 rounded-xl"
+                />
+              </div>
+            </div>
+            <div class="mobile">
+              <label for="mobile" class="text-red-600 text-xl font-semibold"
+                >Mobile</label
+              >
+              <input
+                type="number"
+                name="mobile"
+                id="mobile"
+                required
+                placeholder="Enter your mobile number"
+                class="appearance-none [&::-webkit-inner-spin-button]:hidden [&::-webkit-outer-spin-button]:hidden w-full py-3 px-2 border-2 border-red-300 rounded-xl"
+              />
+            </div>
+            <div class="email">
+              <label for="email" class="text-red-600 text-xl font-semibold"
+                >Email / Businnes Name</label
+              >
+              <input
+                type="text"
+                name="emailorbusinnesname"
+                id="email"
+                required
+                placeholder="Enter your email /Businnes Name"
+                class="w-full py-3 px-2 border-2 border-red-300 rounded-xl"
+              />
+            </div>
+            <div class="businnes">
+              <label for="businnes" class="text-red-600 text-xl font-semibold"
+                >Your Website Link?</label
+              >
+              <input
+                type="text"
+                name="businnes"
+                required
+                id="businnes"
+                placeholder="Enter your businnes URL"
+                class="w-full py-3 px-2 border-2 border-red-300 rounded-xl"
+              />
+            </div>
+            <div class="">
+              <label for="services" class="text-red-600 text-xl font-semibold"
+                >Which Service Are You Looking For?</label
+              >
+            </div>
+            <div id="selected-options" class="p-2 rounded flex flex-wrap">
+              <span class="text-gray-500"></span>
+            </div>
+            <div class="relative inline-block text-left w-full services">
+              <a
+                onclick="toggleDropdown()"
+                class="w-full border-2 border-red-300 p-2 rounded-xl focus:ring-2 focus:ring-red-500 flex justify-between items-center"
+              >
+                Select Services
+                <span>&#9662;</span>
+              </a>
+
+              <div
+                id="dropdown-menu"
+                class="absolute w-full mt-2 bg-white border rounded shadow-md hidden"
+              >
+                <div id="dropdown-options"></div>
+              </div>
+            </div>
+            <div id="package">
+              <h2 class="text-lg font-semibold mb-3">Your Marketing Budget?</h2>
+
+              <label class="flex items-center p-2 cursor-pointer transition">
+                <input
+                  type="checkbox"
+                  name="budget"
+                  value="35k to 50k"
+                  class="budget-checkbox hidden"
+                />
+                <div
+                  class="w-5 h-5 flex justify-center items-center border-2 border-gray-400 rounded transition-colors mr-3"
+                >
+                  <span class="hidden text-white font-bold">✔</span>
+                </div>
+                <span>35k to 50k</span>
+              </label>
+
+              <label
+                class="flex items-center p-2 cursor-pointer mt-2 transition"
+              >
+                <input
+                  type="checkbox"
+                  name="budget"
+                  value="50k to 1L"
+                  class="budget-checkbox hidden"
+                />
+                <div
+                  class="w-5 h-5 flex justify-center items-center border-2 border-gray-400 rounded transition-colors mr-3"
+                >
+                  <span class="hidden text-white font-bold">✔</span>
+                </div>
+                <span>50k to 1L</span>
+              </label>
+
+              <label
+                class="flex items-center p-2 cursor-pointer mt-2 transition"
+              >
+                <input
+                  type="checkbox"
+                  name="budget"
+                  value="1L to 2L"
+                  class="budget-checkbox hidden"
+                />
+                <div
+                  class="w-5 h-5 flex justify-center items-center border-2 border-gray-400 rounded transition-colors mr-3"
+                >
+                  <span class="hidden text-white font-bold">✔</span>
+                </div>
+                <span>1L to 2L</span>
+              </label>
+            </div>
+            <!-- Hidden Inputs to Store Selected Values -->
+            <input
+              type="hidden"
+              name="selectedServices"
+              id="selectedServices"
+            />
+            <input type="hidden" name="selectedBudget" id="selectedBudget" />
+            <!-- Hidden Inputs to Store Selected Values -->
+            <div class="problem">
+              <label for="problem" class="text-red-600 text-xl font-semibold"
+                >What kind of problem you are facing in your business?</label
+              >
+              <input
+                type="text"
+                name="problem"
+                id="problem"
+                class="w-full py-3 px-2 border-2 border-red-300 rounded-xl"
+              />
+            </div>
+            <div class="submit">
+              <button
+                type="submit"
+                class="w-fit bg-red-600 text-white py-3 px-10 rounded-xl"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- =====================================FORM (END)================================================== -->
+    <!-- script -->
+    <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="../asset/js/script.js"></script>
+    <script>
+      function updateHiddenFields() {
+        // Collect selected services
+        let selectedServices = [];
+        document
+          .querySelectorAll(".option-checkbox:checked")
+          .forEach((checkbox) => {
+            selectedServices.push(checkbox.value);
+          });
+        document.getElementById("selectedServices").value =
+          selectedServices.join(", ");
+
+        // Collect selected budget (only one can be selected)
+        let selectedBudget = "";
+        document
+          .querySelectorAll(".budget-checkbox:checked")
+          .forEach((checkbox) => {
+            selectedBudget = checkbox.value;
+          });
+        document.getElementById("selectedBudget").value = selectedBudget;
+      }
+
+      // Attach event listeners to checkboxes to update hidden fields on change
+      document
+        .querySelectorAll(".option-checkbox, .budget-checkbox")
+        .forEach((checkbox) => {
+          checkbox.addEventListener("change", updateHiddenFields);
+        });
+
+      const mobileMenu = () => {
+        const menu = document.getElementById("mobile-Menu");
+
+        if (menu.classList.contains("hidden ")) {
+          menu.classList.remove("hidden");
+        } else {
+          menu.classList.add("hidden");
+        }
+      };
+      function toggleDropdown() {
+        document.getElementById("dropdown-menu").classList.toggle("hidden");
+      }
+
+      const services = [
+        "Social Media Marketing(SMM)",
+        "Digital Marketing",
+        "SEO Services",
+        "Google Ads (PPC)",
+        "SEO Content Writing",
+        "Product Listing + Amazon",
+        "Graphic Designing",
+        "Digital Marketing Consultation",
+        "Political Ads",
+        "Web Designing & Development",
+        "Lead Generation",
+        "WhatsApp Marketing",
+        "Email Marketing",
+        "Marketing Automation",
+        "Personal Branding",
+        "GMB Listing & Ranking",
+        "Lead Nurturing",
+        "Video Production (Personal Branding)",
+      ];
+
+      const dropdownMenu = document.getElementById("dropdown-menu");
+      const dropdownOptions = document.getElementById("dropdown-options");
+      const selectedOptionsBox = document.getElementById("selected-options");
+
+      // Toggle Dropdown Visibility
+      function toggleDropdown() {
+        dropdownMenu.classList.toggle("hidden");
+      }
+
+      // Render Dropdown Options
+      function renderDropdown() {
+        dropdownOptions.innerHTML = "";
+        services.forEach((service) => {
+          const option = document.createElement("label");
+          option.className =
+            "flex items-center p-2 hover:bg-gray-100 cursor-pointer";
+          option.innerHTML = `
+                    <input type="checkbox" value="${service}" class="mr-2 option-checkbox"> ${service}
+                  `;
+          dropdownOptions.appendChild(option);
+        });
+
+        // Add Event Listeners
+        document.querySelectorAll(".option-checkbox").forEach((checkbox) => {
+          checkbox.addEventListener("change", (e) => handleSelection(e.target));
+        });
+      }
+
+      // Handle Selection
+      function handleSelection(checkbox) {
+        if (checkbox.checked) {
+          addSelectedOption(checkbox.value);
+          checkbox.parentElement.classList.add("hidden"); // Hide selected option
+        }
+      }
+
+      // Add Selected Option
+      function addSelectedOption(service) {
+        if (selectedOptionsBox.querySelector(".text-gray-500")) {
+          selectedOptionsBox.innerHTML = ""; // Remove placeholder text
+        }
+
+        const selectedItem = document.createElement("div");
+        selectedItem.className =
+          "flex items-center bg-red-500 text-white px-2 py-1 rounded m-1";
+        selectedItem.innerHTML = `
+                  <button onclick="removeSelectedOption('${service}', this)" class="mr-2 bg-red-500 text-white p-1 rounded">✖</button>
+                  <span>${service}</span>
+                `;
+
+        selectedOptionsBox.appendChild(selectedItem);
+      }
+
+      // Remove Selected Option
+      function removeSelectedOption(service, button) {
+        button.parentElement.remove(); // Remove selected item
+
+        // Unhide the option in the dropdown
+        document.querySelectorAll(".option-checkbox").forEach((checkbox) => {
+          if (checkbox.value === service) {
+            checkbox.parentElement.classList.remove("hidden");
+            checkbox.checked = false;
+          }
+        });
+
+        // Show placeholder if no selected items
+        if (selectedOptionsBox.childElementCount === 0) {
+          selectedOptionsBox.innerHTML = `<span class="text-gray-500"></span>`;
+        }
+      }
+
+      // Initialize Dropdown
+      renderDropdown();
+      // ckeck box
+      const checkboxes = document.querySelectorAll(".budget-checkbox");
+      const checkDivs = document.querySelectorAll("label div");
+
+      checkboxes.forEach((checkbox, index) => {
+        checkbox.addEventListener("change", () => {
+          checkboxes.forEach((cb, i) => {
+            if (cb !== checkbox) {
+              cb.checked = false;
+              checkDivs[i].classList.remove("bg-red-500", "border-red-500");
+              checkDivs[i].children[0].classList.add("hidden");
+            }
+          });
+
+          if (checkbox.checked) {
+            checkDivs[index].classList.add("bg-red-500", "border-red-500");
+            checkDivs[index].children[0].classList.remove("hidden");
+          } else {
+            checkDivs[index].classList.remove("bg-red-500", "border-red-500");
+            checkDivs[index].children[0].classList.add("hidden");
+          }
+        });
+      });
+
+      document
+        .getElementById("myForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          let formData = new FormData(this);
+
+          fetch(this.action, {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.result === "success") {
+                alert("Form submitted successfully! 🎉");
+                window.location.reload();
+              } else {
+                alert("Form submission failed. Please try again.");
+              }
+            })
+            .catch((error) => {
+              alert(
+                "An error occurred. Please check your connection and try again."
+              );
+              console.error("Error:", error);
+            });
+        });
+    </script>
+  </body>
+</html>

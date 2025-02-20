@@ -167,7 +167,9 @@
       <section class="rounded-2xl p-5 h-96">
         <div class="container mx-auto">
           <div class="flex flex-col items-center">
-            <h1 class="text-8xl font-bold text-black pt-20">Contact</h1>
+            <h1 class="text-5xl md:text-8xl font-bold text-black pt-20">
+              Contact
+            </h1>
           </div>
         </div>
       </section>
@@ -636,15 +638,12 @@
       const mobileMenu = () => {
         const menu = document.getElementById("mobile-Menu");
 
-        if (menu.classList.contains("hidden ")) {
+        if (menu.classList.contains("hidden")) {
           menu.classList.remove("hidden");
         } else {
           menu.classList.add("hidden");
         }
       };
-      function toggleDropdown() {
-        document.getElementById("dropdown-menu").classList.toggle("hidden");
-      }
 
       const services = [
         "Social Media Marketing(SMM)",

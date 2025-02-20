@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- =============== CSS ======================== -->
+    <link rel="stylesheet" href="../asset/css/style.css" />
+    <link rel="shotcut icon" href="../asset/images/d-grow-footer.png" />
+
+    <!-- =============== js ======================== -->
+    <!-- tailwind -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <!-- =============== js (END) ======================== -->
+    <title>D-Grow</title>
+  </head>
+  <body class="overflow-x-hidden">
+    <div class="bg-red-100">
+      <!-- ===================================== NAVIGATION BAR ======================================= -->
+
+      <section class="bg-red-600 rounded-2xl m-2 p-5 sticky top-0 z-40 md:m-10">
+        <div class="container mx-auto">
+          <!-- navbar -->
+          <div class="flex">
+            <a
+              href="#"
+              class="logo-imgs w-44 pr-5 border-r mr-5 border-red-900"
+            >
+              <img class="w-44" src="../asset/images/d-growlogo.png" alt="" />
+            </a>
+            <div class="my-auto">
+              <button class="lg:hidden" onclick="mobileMenu()">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+              </button>
+              <ul class="font-bold text-white hidden lg:flex">
+                <li class="pr-5">
+                  <a class="px-3 py-2 text-black" href="../index.html">Home</a>
+                </li>
+                <li class="pr-5">
+                  <a class="px-3 py-2 hover:border-b-2" href="#">About</a>
+                </li>
+                <li class="pr-5">
+                  <button
+                    class="px-3 pb-2 hover:border-b-2"
+                    data-dropdown-toggle="dropdown"
+                  >
+                    Services
+                  </button>
+                  <div
+                    class="hidden bg-white text-base z-5 list-none divide-y divide-gray-100 rounded shadow my-4"
+                    id="dropdown"
+                  >
+                    <ul class="py-1" aria-labelledby="dropdown">
+                      <li>
+                        <a
+                          href="#"
+                          class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                          >SMM</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                          >Lead Generate</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="../pages/services/seo.html"
+                          class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                          >SEO</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                          >Website Designing</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                          >Branding</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="pr-5">
+                  <a class="px-3 py-2 hover:border-b-2" href="#">Case study</a>
+                </li>
+                <li class="pr-5">
+                  <a class="px-3 py-2 hover:border-b-2" href="#">Blog</a>
+                </li>
+                <li class="pr-5">
+                  <a class="px-3 py-2 hover:border-b-2" href="#">Contacts</a>
+                </li>
+              </ul>
+            </div>
+
+            <a
+              href="#"
+              class="ml-auto my-auto text-medium bg-white text-red-400 px-3 py-2 rounded-2xl flex h-10 hover:bg-green-500 hover:text-white border-none"
+              ><span class="px-2 text-sm md:text-xl">MEDGROW</span>
+            </a>
+          </div>
+          <!-- moblie nav bar -->
+          <div class="hidden" id="mobile-Menu">
+            <ul
+              class="font-bold text-white mt-10 grid place-items-center lg:hidden"
+            >
+              <li class="mt-2">
+                <a class="py-2" href="../index.html">Home</a>
+              </li>
+              <li class="mt-2">
+                <a class="py-2" href="#">About</a>
+              </li>
+              <li class="mt-2">
+                <a class="py-2" href="./pages/services/service.html"
+                  >Services</a
+                >
+              </li>
+              <li class="mt-2">
+                <a class="py-2" href="#">Case study</a>
+              </li>
+              <li class="mt-2">
+                <a class="py-2" href="#">Blog</a>
+              </li>
+              <li class="mt-2">
+                <a class="py-2 hover:border-b-2" href="#">Contacts</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- ===================================== NAVIGATION BAR (END)======================================= -->
+      <!-- ==================================== SERVICE HEADER ============================================ -->
+      <section class="rounded-2xl p-5 h-96">
+        <div class="container mx-auto">
+          <div class="flex flex-col items-center">
+            <h1 class="text-8xl font-bold text-black pt-20">About Us</h1>
+          </div>
+        </div>
+      </section>
+      <!-- ==================================== SERVICE HEADER (END)============================================ -->
+    </div>
+    <!-- =========================================  section 1 ============================================ -->
+    <section
+      class="flex flex-col-reverse px-5 py-10 text-red-600 md:flex-row md:py-10 md:px-15"
+    >
+      <div class="w-full md:w-1/2">
+        <img src="../asset/images/section1-side-img-dgrow.png" alt="" />
+      </div>
+      <div
+        class="w-full md:w-1/2 flex justify-center align-middle flex-col relative"
+      >
+        <p class="text-sm md:text-xl font-semibold pb-3 pl-2 text-black">
+          About Us
+        </p>
+        <h2 class="text-3xl md:text-5xl font-bold mb-5 text-red-600">
+          About Us Let's make every click count into leads with <br />
+          D-Grow Marketing Agency.
+        </h2>
+        <p class="text-sm md:text-xl text-justify pb-10">
+          We are your prominent partner in driving success for your business
+          through strategic digital marketing. We understand the value of a
+          strong online presence and the impact it can have on your revenue.
+          That's why we offer scalable solutions tailored to meet your specific
+          business goals.
+        </p>
+        <div class="flex">
+          <a href="#" class="py-2 px-3 bg-red-600 rounded-xl text-white"
+            >Book Your Consultation Now!</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- =========================================  section 1 (END)============================================ -->
+    <!-- ====================================== number ====================================== -->
+    <div class="relative font-inter antialiased">
+      <section
+        class="relative flex flex-col justify-center bg-red-50 overflow-hidden"
+      >
+        <div
+          class="w-full max-w-5xl mx-auto px-4 md:px-6 py-24 flex flex-col items-center"
+        >
+          <div class="grid gap-12 md:grid-cols-4 md:gap-16 counters">
+            <div class="counter">
+              <div
+                class="w-14 h-14 rounded shadow-md bg-white flex justify-center items-center rotate-3 mb-6"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="31" height="20">
+                  <defs>
+                    <linearGradient
+                      id="icon1-a"
+                      x1="50%"
+                      x2="50%"
+                      y1="0%"
+                      y2="100%"
+                    >
+                      <stop offset="0%" stop-color="#e8000c" />
+                      <stop offset="100%" stop-color="#e8000c" />
+                    </linearGradient>
+                    <linearGradient
+                      id="icon1-b"
+                      x1="50%"
+                      x2="50%"
+                      y1="0%"
+                      y2="100%"
+                    >
+                      <stop offset="0%" stop-color="#EEF2FF" />
+                      <stop offset="100%" stop-color="#e8000c" />
+                    </linearGradient>
+                  </defs>
+                  <g fill="none" fill-rule="nonzero">
+                    <path
+                      fill="url(#icon1-a)"
+                      d="M20.625 0H9.375a9.375 9.375 0 0 0 0 18.75h11.25a9.375 9.375 0 0 0 0-18.75Z"
+                      transform="translate(.885 .885)"
+                    />
+                    <path
+                      fill="url(#icon1-b)"
+                      d="M9.375 17.5A8.125 8.125 0 0 1 1.25 9.375 8.125 8.125 0 0 1 9.375 1.25 8.125 8.125 0 0 1 17.5 9.375 8.125 8.125 0 0 1 9.375 17.5Z"
+                      transform="translate(.885 .885)"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <h1 class="text-slate-700 text-5xl font-extrabold mb-2">
+                <span
+                  data-count="300"
+                  class="text-slate-900 text-5xl font-extrabold mb-2 ]"
+                ></span
+                >K
+              </h1>
+              <h3
+                class="inline-flex text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-red-300 mb-2"
+              >
+                Leads
+              </h3>
+            </div>
+            <div class="counter">
+              <div
+                class="w-14 h-14 rounded shadow-md bg-white flex justify-center items-center -rotate-3 mb-6"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="19">
+                  <defs>
+                    <linearGradient
+                      id="icon2-a"
+                      x1="50%"
+                      x2="50%"
+                      y1="0%"
+                      y2="100%"
+                    >
+                      <stop offset="0%" stop-color="#fff" />
+                      <stop offset="100%" stop-color="#e8000c" />
+                    </linearGradient>
+                  </defs>
+                  <g fill="none" fill-rule="nonzero">
+                    <path
+                      fill="url(#icon2-a)"
+                      d="M5.5 0a5.5 5.5 0 0 0 0 11c.159 0 .314-.01.469-.024a15.896 15.896 0 0 1-2.393 6.759A.5.5 0 0 0 4 18.5h1a.5.5 0 0 0 .362-.155C7.934 15.64 11 11.215 11 5.5A5.506 5.506 0 0 0 5.5 0Z"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <h1 class="text-slate-700 text-5xl font-extrabold mb-2">
+                <span
+                  data-count="100"
+                  class="text-slate-700 text-5xl font-extrabold mb-2"
+                  >0</span
+                >M
+              </h1>
+              <h3
+                class="inline-flex text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-red-300 mb-2"
+              >
+                Organic Traffic
+              </h3>
+            </div>
+            <div class="counter">
+              <div
+                class="w-14 h-14 rounded shadow-md bg-white flex justify-center items-center -rotate-3 mb-6"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="19">
+                  <defs>
+                    <linearGradient
+                      id="icon2-a"
+                      x1="50%"
+                      x2="50%"
+                      y1="0%"
+                      y2="100%"
+                    >
+                      <stop offset="0%" stop-color="#e8000c" />
+                      <stop offset="100%" stop-color="##e8000c" />
+                    </linearGradient>
+                  </defs>
+                  <g fill="none" fill-rule="nonzero">
+                    <path
+                      fill="url(#icon2-a)"
+                      d="M5.5 0a5.5 5.5 0 0 0 0 11c.159 0 .314-.01.469-.024a15.896 15.896 0 0 1-2.393 6.759A.5.5 0 0 0 4 18.5h1a.5.5 0 0 0 .362-.155C7.934 15.64 11 11.215 11 5.5A5.506 5.506 0 0 0 5.5 0Z"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <h1 class="text-slate-700 text-5xl font-extrabold mb-2">
+                <span
+                  data-count="60"
+                  class="text-slate-700 text-5xl font-extrabold mb-2"
+                  >0</span
+                >DAYS
+              </h1>
+              <h3
+                class="inline-flex text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-red-300 mb-2"
+              >
+                Rank On Google's 1st Page
+              </h3>
+            </div>
+            <div class="counter">
+              <div
+                class="w-14 h-14 rounded shadow-md bg-white flex justify-center items-center -rotate-3 mb-6"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="19">
+                  <defs>
+                    <linearGradient
+                      id="icon2-a"
+                      x1="50%"
+                      x2="50%"
+                      y1="0%"
+                      y2="100%"
+                    >
+                      <stop offset="0%" stop-color="#fff" />
+                      <stop offset="100%" stop-color="#e8000c" />
+                    </linearGradient>
+                  </defs>
+                  <g fill="none" fill-rule="nonzero">
+                    <path
+                      fill="url(#icon2-a)"
+                      d="M5.5 0a5.5 5.5 0 0 0 0 11c.159 0 .314-.01.469-.024a15.896 15.896 0 0 1-2.393 6.759A.5.5 0 0 0 4 18.5h1a.5.5 0 0 0 .362-.155C7.934 15.64 11 11.215 11 5.5A5.506 5.506 0 0 0 5.5 0Z"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <h1 class="text-slate-700 text-5xl font-extrabold mb-2">
+                <span data-count="32">0</span>DAYS
+              </h1>
+              <h3
+                class="inline-flex text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-red-300 mb-2"
+              >
+                List Your GMB In Google
+              </h3>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- ====================================== number (END)====================================== -->
+    <!-- ===================================== Choose Us ============================ -->
+    <section class="px-5 py-10 relative mx-auto md:py-20 md:px-15">
+      <h2 class="text-5xl text-red-600 font-bold text-center pb-20">
+        If You Choose Us?
+      </h2>
+      <div class="grid gap-5 md:grid-cols-4 md:gap-10 mb-5 md:mb-10">
+        <div
+          class="w-11/12 flex justify-center align-middle flex-col mx-auto p-5 bg-red-600 text-white rounded-2xl"
+        >
+          <div class=" ">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-hard-drive"
+            >
+              <line x1="22" x2="2" y1="12" y2="12" />
+              <path
+                d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"
+              />
+              <line x1="6" x2="6.01" y1="16" y2="16" />
+              <line x1="10" x2="10.01" y1="16" y2="16" />
+            </svg>
+          </div>
+          <div class="">
+            <h3 class="text-xl py-2 font-semibold">Increased Visibility</h3>
+            <p class="">
+              Improve your online presence & reach a wider audience through
+              strategic digital marketing techniques.
+            </p>
+          </div>
+        </div>
+        <div
+          class="w-11/12 flex justify-center align-middle flex-col mx-auto p-5 bg-red-600 text-white rounded-2xl"
+        >
+          <div class=" ">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-keyboard"
+            >
+              <path d="M10 8h.01" />
+              <path d="M12 12h.01" />
+              <path d="M14 8h.01" />
+              <path d="M16 12h.01" />
+              <path d="M18 8h.01" />
+              <path d="M6 8h.01" />
+              <path d="M7 16h10" />
+              <path d="M8 12h.01" />
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+            </svg>
+          </div>
+          <div class="">
+            <h3 class="text-xl py-2 font-semibold">Competitive Advantage</h3>
+            <p class="">
+              Stay ahead of your competitors by leveraging innovative digital
+              marketing tactics and staying updated with the latest trends.
+            </p>
+          </div>
+        </div>
+        <div
+          class="w-11/12 flex justify-center align-middle flex-col mx-auto p-5 bg-red-600 text-white rounded-2xl"
+        >
+          <div class=" ">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-hard-drive"
+            >
+              <line x1="22" x2="2" y1="12" y2="12" />
+              <path
+                d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"
+              />
+              <line x1="6" x2="6.01" y1="16" y2="16" />
+              <line x1="10" x2="10.01" y1="16" y2="16" />
+            </svg>
+          </div>
+          <div class="">
+            <h3 class="text-xl py-2 font-semibold">More Leads - Sales</h3>
+            <p class="">
+              Generate quality leads and boost sales by targeting the right
+              audience with personalized marketing campaigns.
+            </p>
+          </div>
+        </div>
+        <div
+          class="w-11/12 flex justify-center align-middle flex-col mx-auto p-5 bg-red-600 text-white rounded-2xl"
+        >
+          <div class=" ">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-keyboard"
+            >
+              <path d="M10 8h.01" />
+              <path d="M12 12h.01" />
+              <path d="M14 8h.01" />
+              <path d="M16 12h.01" />
+              <path d="M18 8h.01" />
+              <path d="M6 8h.01" />
+              <path d="M7 16h10" />
+              <path d="M8 12h.01" />
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+            </svg>
+          </div>
+          <div class="">
+            <h3 class="text-xl py-2 font-semibold">
+              Better Customer Engagement
+            </h3>
+            <p class="">
+              Connect with your audience on a deeper level through engaging
+              content and interactive social media campaigns.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="grid gap-5 md:grid-cols-4 md:gap-10">
+        <div
+          class="w-11/12 flex justify-center align-middle flex-col mx-auto p-5 bg-red-600 text-white rounded-2xl"
+        >
+          <div class=" ">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-hard-drive"
+            >
+              <line x1="22" x2="2" y1="12" y2="12" />
+              <path
+                d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"
+              />
+              <line x1="6" x2="6.01" y1="16" y2="16" />
+              <line x1="10" x2="10.01" y1="16" y2="16" />
+            </svg>
+          </div>
+          <div class="">
+            <h3 class="text-xl py-2 font-semibold">Higher ROI</h3>
+            <p class="">
+              Maximize your return on investment with cost-effective digital
+              marketing strategies that deliver measurable results.
+            </p>
+          </div>
+        </div>
+        <div
+          class="w-11/12 flex justify-center align-middle flex-col mx-auto p-5 bg-red-600 text-white rounded-2xl"
+        >
+          <div class=" ">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-keyboard"
+            >
+              <path d="M10 8h.01" />
+              <path d="M12 12h.01" />
+              <path d="M14 8h.01" />
+              <path d="M16 12h.01" />
+              <path d="M18 8h.01" />
+              <path d="M6 8h.01" />
+              <path d="M7 16h10" />
+              <path d="M8 12h.01" />
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+            </svg>
+          </div>
+          <div class="">
+            <h3 class="text-xl py-2 font-semibold">
+              Scalability and Flexibility
+            </h3>
+            <p class="">
+              Adapt your marketing efforts according to changing market
+              conditions and business objectives, ensuring long-term success and
+              growth.
+            </p>
+          </div>
+        </div>
+        <div
+          class="w-11/12 flex justify-center align-middle flex-col mx-auto p-5 bg-red-600 text-white rounded-2xl"
+        >
+          <div class=" ">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-hard-drive"
+            >
+              <line x1="22" x2="2" y1="12" y2="12" />
+              <path
+                d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"
+              />
+              <line x1="6" x2="6.01" y1="16" y2="16" />
+              <line x1="10" x2="10.01" y1="16" y2="16" />
+            </svg>
+          </div>
+          <div class="">
+            <h3 class="text-xl py-2 font-semibold">
+              Enhanced Brand Reputation
+            </h3>
+            <p class="">
+              GeBuild a strong brand identity and establish credibility in your
+              industry, leading to increased trust and loyalty among customers.
+            </p>
+          </div>
+        </div>
+        <div
+          class="w-11/12 flex justify-center align-middle flex-col mx-auto p-5 bg-red-600 text-white rounded-2xl"
+        >
+          <div class=" ">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-keyboard"
+            >
+              <path d="M10 8h.01" />
+              <path d="M12 12h.01" />
+              <path d="M14 8h.01" />
+              <path d="M16 12h.01" />
+              <path d="M18 8h.01" />
+              <path d="M6 8h.01" />
+              <path d="M7 16h10" />
+              <path d="M8 12h.01" />
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+            </svg>
+          </div>
+          <div class="">
+            <h3 class="text-xl py-2 font-semibold">
+              Improved Customer Insights
+            </h3>
+            <p class="">
+              Gain valuable insights into customer behavior and preferences,
+              allowing you to refine your marketing strategies for better
+              results.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===================================== Choose Us (END)============================ -->
+    <!-- ========================================SECTION 2 ============================== -->
+    <section
+      class="flex flex-col-reverse px-5 py-10 text-red-600 md:flex-row md:py-10 md:px-15"
+    >
+      <div
+        class="w-full md:w-1/2 flex justify-center align-middle flex-col relative"
+      >
+        <p class="text-sm md:text-xl font-semibold pb-3 pl-2 text-black">
+          D-Grow Marketing Agency
+        </p>
+        <h2 class="text-xl md:text-3xl font-bold mb-5 text-red-600">
+          Your Right Partner - <br />
+          Digital Marketing In Chennai
+        </h2>
+        <img src="../asset/images/about.sidemenu.png" alt="" />
+      </div>
+
+      <div class="w-full md:w-1/2 flex flex-col relative">
+        <div class="section-text-container">
+          <div class="flex sec-btn">
+            <h3
+              id="vission-btn"
+              class="px-5 py-3 rounded-tl-2xl bg-red-500 text-white cursor-pointer font-semibold text-lg"
+              onclick="showContent('vission')"
+            >
+              Vision
+            </h3>
+            <h3
+              id="mission-btn"
+              class="px-5 py-3 rounded-tr-2xl bg-gray-500 text-white cursor-pointer font-semibold text-lg"
+              onclick="showContent('mission')"
+            >
+              Mission
+            </h3>
+          </div>
+
+          <p
+            id="vission-content"
+            class="block bg-red-500 text-white p-5 rounded-br-2xl rounded-bl-2xl rounded-tr-2xl text-lg"
+          >
+            As a data-driven and results-oriented digital marketing agency. With
+            the rise of technology and digital platforms, it was clear that
+            businesses needed a partner who could navigate this ever-evolving
+            <br /><br />
+            landscape and deliver measurable results. Our vission is, From
+            website optimization to social media advertising, search engine
+            optimization
+            <br />
+            <br />
+            to email marketing, to offer a comprehensive range of services
+            tailored to your specific needs. Our team stays up-to-date with the
+            latest trends and techniques to ensure that your business stands out
+            <br /><br />
+            from the competition. With our customer-centric approach and
+            commitment to delivering exceptional ROI for our clients, we have
+            become a prominent digital marketing partner for businesses of all
+            sizes.
+          </p>
+
+          <p
+            id="mission-content"
+            class="hidden bg-red-500 text-white p-5 rounded-br-2xl rounded-bl-2xl rounded-tr-2xl text-lg"
+          >
+            Our team consists of experienced marketers who are dedicated to
+            helping you achieve success in a competitive online landscape. With
+            our proven strategies and practical techniques, we can drive
+            traffic, leads, and sales for your business while maximizing your
+            ROI.
+            <br /><br />
+
+            But our services don't just stop at increasing numbers on a report.
+            We believe in measuring what truly matters - your revenue. Our
+            mission is to be more than just another digital marketing agency; we
+            want to be your trusted partner in growing and sustaining your
+            business.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================SECTION (END) ============================== -->
+    <!-- ============================================ client logo ===================================== -->
+    <section class="px-5 relative mx-auto md:px-15">
+      <h2 class="text-5xl font-bold text-red-600 my-14 text-center">
+        Our Clients
+      </h2>
+    </section>
+    <div
+      class="grid gap-5 grid-cols-3 md:grid-cols-6 mb-5 md:mb-10 px-5 md:px-48"
+    >
+      <div
+        class="w-32 h-32 flex justify-center align-middle flex-col mx-auto p-5 rounded-full overflow-hidden"
+        style="box-shadow: 0px 0px 16px #cecece"
+      >
+        <img src="../asset/images/d-grow-footer.png" alt="" />
+      </div>
+      <div
+        class="w-32 h-32 flex justify-center align-middle flex-col mx-auto p-5 rounded-full overflow-hidden"
+        style="box-shadow: 0px 0px 16px #d6d6d6"
+      >
+        <img src="../asset/images/d-grow-footer.png" alt="" />
+      </div>
+      <div
+        class="w-32 h-32 flex justify-center align-middle flex-col mx-auto p-5 rounded-full overflow-hidden"
+        style="box-shadow: 0px 0px 16px #cecece"
+      >
+        <img src="../asset/images/d-grow-footer.png" alt="" />
+      </div>
+      <div
+        class="w-32 h-32 flex justify-center align-middle flex-col mx-auto p-5 rounded-full overflow-hidden"
+        style="box-shadow: 0px 0px 16px #cecece"
+      >
+        <img src="../asset/images/d-grow-footer.png" alt="" />
+      </div>
+      <div
+        class="w-32 h-32 flex justify-center align-middle flex-col mx-auto p-5 rounded-full overflow-hidden"
+        style="box-shadow: 0px 0px 16px #cecece"
+      >
+        <img src="../asset/images/d-grow-footer.png" alt="" />
+      </div>
+      <div
+        class="w-32 h-32 flex justify-center align-middle flex-col mx-auto p-5 rounded-full overflow-hidden"
+        style="box-shadow: 0px 0px 16px #cecece"
+      >
+        <img src="../asset/images/d-grow-footer.png" alt="" />
+      </div>
+    </div>
+    <!-- ============================================ client logo(END) ===================================== -->
+    <!-- ===================================== CTA2 BTN ======================================= -->
+    <section
+      class="px-5 py-5 lg:flex lg:justify-between bg-red-600 lg:px-30 md:py-10"
+    >
+      <h2 class="text-3xl font-bold text-white">
+        Do you want to scale your business profitably? <br />
+        <span class="text-lg"
+          >Let us take the reins of your digital marketing efforts while you
+          focus on what you do best - running your business.</span
+        >
+      </h2>
+      <a
+        href="#"
+        class="w-fit text-lg bg-white text-red-400 px-5 py-2 rounded-2xl flex h-10 mt-5 md:mt-0"
+        >Contact us today!
+      </a>
+    </section>
+    <!-- ===================================== CTA2 BTN (END) ======================================= -->
+    <!-- ============================================ client logo ===================================== -->
+    <div class="bar-line">
+      <div class="wrapper">
+        <div class="item item1">
+          <img src="../../assets/images/brand/1.png" alt="" />
+        </div>
+        <div class="item item2">
+          <img src="../../assets/images/brand/2.png" alt="" />
+        </div>
+        <div class="item item3">
+          <img src="../../assets/images/brand/3.png" alt="" />
+        </div>
+        <div class="item item4">
+          <img src="../../assets/images/brand/4.png" alt="" />
+        </div>
+        <div class="item item5">
+          <img src="../../assets/images/brand/5.png" alt="" />
+        </div>
+        <div class="item item6">
+          <img src="../../assets/images/brand/6.png" alt="" />
+        </div>
+        <div class="item item7">
+          <img src="../../assets/images/brand/7.png" alt="" />
+        </div>
+        <div class="item item8">
+          <img src="../../assets/images/brand/7.png" alt="" />
+        </div>
+      </div>
+      <div class="wrapper wrapper2">
+        <div class="text-slide text-slide1">Aathvi</div>
+        <div class="text-slide text-slide2">Adhiya Asthetic</div>
+        <div class="text-slide text-slide3">Skinora</div>
+        <div class="text-slide text-slide4">Sleep Bud Sleep</div>
+        <div class="text-slide text-slide5">Sleep & Wellness</div>
+        <div class="text-slide text-slide6">Glemcosmo</div>
+        <div class="text-slide text-slide7">Marks Biotech</div>
+        <div class="text-slide text-slide8">Aravind Polyclinic</div>
+      </div>
+    </div>
+    <!-- ============================================ client logo(END) ===================================== -->
+    <!-- ==================================== FOOTER ================================================= -->
+    <footer
+      class="bg-black text-white grid grid-cols-1 px-14 pt-14 pb-4 md:grid-cols-3 gap-4"
+    >
+      <div class="md:pl-20">
+        <img src="../asset/images/d-grow-footer.png" alt="" />
+        <p class="text-xl font-semibold pl-2 mt-3">
+          Elevating Brands, Driving Growth with innovation and creativity, we
+          turn your digital aspirations into reality.
+        </p>
+      </div>
+      <div class="grid grid-rows-3">
+        <p class="text-xl font-semibold">D-Grow Marketing Agency,</p>
+        <p class="text-xl font-semibold">
+          Address: Plot No. 141, SF No: 14/3 Radha Avenue Main Road,
+          Valasaravakkam, Chennai - 600087
+        </p>
+        <a href="tel:+917373509585"
+          ><p class="text-xl font-semibold">Phone: +91 7373509585</p></a
+        >
+        <a href="enquiry@dgrowmarketing.com"
+          ><p class="text-xl font-semibold">
+            Email: enquiry@dgrowmarketing.com
+          </p></a
+        >
+      </div>
+      <div class="md:pr-24">
+        <ul class="flex flex-col gap-3">
+          <li class="text-xl font-semibold text-center md:text-end">
+            <a href="#">Home</a>
+          </li>
+          <li class="text-xl font-semibold text-center md:text-end">
+            <a href="#">About Us</a>
+          </li>
+          <li class="text-xl font-semibold text-center md:text-end">
+            <a href="#">Services</a>
+          </li>
+          <li class="text-xl font-semibold text-center md:text-end">
+            <a href="#">SEO Service</a>
+          </li>
+          <li class="text-xl font-semibold text-center md:text-end">
+            <a href="#">Social Media Marketing</a>
+          </li>
+          <li class="text-xl font-semibold text-center md:text-end">
+            <a href="#">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <div class="w-full h-1 bg-red-600"></div>
+    <div class="w-full bg-black text-white text-center py-3 px-3">
+      <a href="#" class="text-center"
+        >Copyright © 2024 D-Grow Marketing Agency</a
+      >
+    </div>
+    <div
+      class="fixed bottom-0 right-0 w-14 h-14 rounded-full bg-red-600 flex justify-center items-center mr-5 mb-5 z-20 cursor-pointer"
+    >
+      <h2 class="text-white cursor-pointer font-bold text-3xl">+</h2>
+      <div
+        class="text-white cursor-pointer font-bold text-3xl fixed bottom-16 right-0 w-10 h-10 rounded-full bg-blue-500 flex justify-center items-center mr-7 mb-5 z-20"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-phone"
+        >
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+          />
+        </svg>
+      </div>
+      <div
+        class="text-white cursor-pointer font-bold text-3xl fixed bottom-28 right-0 w-10 h-10 rounded-full bg-green-500 flex justify-center items-center mr-7 mb-5 z-20"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          style="fill: rgb(255, 255, 255); transform: msfilter"
+          class="lucide lucide-whatsapp"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M18.403 5.633A8.919 8.919 0 0 0 12.053 3c-4.948 0-8.976 4.027-8.978 8.977 0 1.582.413 3.126 1.198 4.488L3 21.116l4.759-1.249a8.981 8.981 0 0 0 4.29 1.093h.004c4.947 0 8.975-4.027 8.977-8.977a8.926 8.926 0 0 0-2.627-6.35m-6.35 13.812h-.003a7.446 7.446 0 0 1-3.798-1.041l-.272-.162-2.824.741.753-2.753-.177-.282a7.448 7.448 0 0 1-1.141-3.971c.002-4.114 3.349-7.461 7.465-7.461a7.413 7.413 0 0 1 5.275 2.188 7.42 7.42 0 0 1 2.183 5.279c-.002 4.114-3.349 7.462-7.461 7.462m4.093-5.589c-.225-.113-1.327-.655-1.533-.73-.205-.075-.354-.112-.504.112s-.58.729-.711.879-.262.168-.486.056-.947-.349-1.804-1.113c-.667-.595-1.117-1.329-1.248-1.554s-.014-.346.099-.458c.101-.1.224-.262.336-.393.112-.131.149-.224.224-.374s.038-.281-.019-.393c-.056-.113-.505-1.217-.692-1.666-.181-.435-.366-.377-.504-.383a9.65 9.65 0 0 0-.429-.008.826.826 0 0 0-.599.28c-.206.225-.785.767-.785 1.871s.804 2.171.916 2.321c.112.15 1.582 2.415 3.832 3.387.536.231.954.369 1.279.473.537.171 1.026.146 1.413.089.431-.064 1.327-.542 1.514-1.066.187-.524.187-.973.131-1.067-.056-.094-.207-.151-.43-.263"
+          ></path>
+        </svg>
+      </div>
+      <div
+        class="text-white cursor-pointer font-bold text-3xl fixed bottom-40 right-0 w-10 h-10 rounded-full bg-red-500 flex justify-center items-center mr-7 mb-5 z-20"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-mail-plus"
+        >
+          <path d="M22 13V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h8" />
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+          <path d="M19 16v6" />
+          <path d="M16 19h6" />
+        </svg>
+      </div>
+    </div>
+    <!-- ===================================== Footer (END) ======================================= -->
+    <!-- script -->
+    <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="../asset/js/script.js"></script>
+    <script>
+      const mobileMenu = () => {
+        const menu = document.getElementById("mobile-Menu");
+
+        if (menu.classList.contains("hidden ")) {
+          menu.classList.remove("hidden");
+        } else {
+          menu.classList.add("hidden");
+        }
+      };
+      function toggleDropdown() {
+        document.getElementById("dropdown-menu").classList.toggle("hidden");
+      }
+      const counters = document.querySelectorAll(".counter span");
+      const container = document.querySelector(".counters");
+      let active = false;
+
+      window.addEventListener("scroll", () => {
+        if (
+          window.pageYOffset >
+            container.offsetTop - container.offsetHeight - 500 &&
+          !active
+        ) {
+          counters.forEach((counter) => {
+            counter.innerHTML = 0;
+            let count = 0;
+
+            const updateCount = () => {
+              const target = parseInt(counter.dataset.count);
+              if (count < target) {
+                count++;
+                counter.innerHTML = count;
+                setTimeout(updateCount, 15);
+              } else {
+                counter.innerHTML = target;
+              }
+            };
+
+            updateCount();
+          });
+
+          active = true;
+        } else if (
+          window.pageYOffset <
+            container.offsetTop - container.offsetHeight - 500 &&
+          active
+        ) {
+          counters.forEach((counter) => {
+            counter.innerHTML = 0;
+          });
+          active = false;
+        }
+      });
+
+      const arrow = document.getElementById("scrollArrow");
+      const firstSection = document.querySelector(".hero");
+
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > firstSection.offsetHeight) {
+          arrow.style.display = "block";
+        } else {
+          arrow.style.display = "none";
+        }
+      });
+
+      function showContent(section) {
+        // Toggle content visibility
+        document
+          .getElementById("vission-content")
+          .classList.toggle("hidden", section !== "vission");
+        document
+          .getElementById("mission-content")
+          .classList.toggle("hidden", section !== "mission");
+
+        // Toggle active styles for buttons
+        document
+          .getElementById("vission-btn")
+          .classList.toggle("bg-red-500", section === "vission");
+        document
+          .getElementById("vission-btn")
+          .classList.toggle("bg-gray-500", section !== "vission");
+
+        document
+          .getElementById("mission-btn")
+          .classList.toggle("bg-red-500", section === "mission");
+        document
+          .getElementById("mission-btn")
+          .classList.toggle("bg-gray-500", section !== "mission");
+      }
+    </script>
+  </body>
+</html>

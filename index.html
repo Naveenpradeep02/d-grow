@@ -18,6 +18,7 @@
       defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
     <!-- =============== js (END) ======================== -->
     <title>D-Grow</title>
   </head>
@@ -192,8 +193,25 @@
             >
           </div>
         </div>
-        <div class="w-full md:w-1/2">
-          <img class="" src="./asset/images/hero-vector-d-grow.png" alt="" />
+        <div class="w-full md:w-1/2 md:h-96 flex items-center">
+          <!-- <img class="" src="./asset/images/hero-vector-d-grow.png" alt="" /> -->
+
+          <div
+            class="w-full flex items-center md:mb-40"
+            id="animation_container"
+          ></div>
+          <script>
+            var animation = bodymovin.loadAnimation({
+              container: document.getElementById("animation_container"),
+              path: "../../asset/js/Outbound Marketing.json",
+              renderer: "svg",
+              loop: true,
+              autoplay: true,
+              rendererSettings: {
+                preserveAspectRatio: "xMidYMid slice",
+              },
+            });
+          </script>
         </div>
       </div>
       <div class="hidden lg:block absolute -left-20 top-1/2 -z-10">

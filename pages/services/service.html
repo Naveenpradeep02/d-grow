@@ -3,7 +3,542 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <!-- =============== CSS ======================== -->
+    <link rel="stylesheet" href="../../asset/css/style.css" />
+    <link rel="shotcut icon" href="../../asset/images/d-grow-footer.png" />
+
+    <!-- =============== js ======================== -->
+    <!-- tailwind -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <!-- =============== js (END) ======================== -->
+    <title>D-Grow</title>
   </head>
-  <body></body>
+  <body>
+    <!-- ===================================== NAVIGATION BAR ======================================= -->
+
+    <section class="bg-red-600 rounded-2xl m-2 p-5 sticky top-0 z-40 md:m-10">
+      <div class="container mx-auto">
+        <!-- navbar -->
+        <div class="flex">
+          <a href="#" class="logo-imgs w-44 pr-5 border-r mr-5 border-red-900">
+            <img class="w-44" src="../../asset/images/d-growlogo.png" alt="" />
+          </a>
+          <div class="my-auto">
+            <button class="lg:hidden" onclick="mobileMenu()">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </button>
+            <ul class="font-bold text-white hidden lg:flex">
+              <li class="pr-5">
+                <a class="px-3 py-2 hover:border-b-2" href="../../index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="pr-5">
+                <a class="px-3 py-2 hover:border-b-2" href="../about.html"
+                  >About</a
+                >
+              </li>
+              <li class="pr-5">
+                <button
+                  class="px-3 pb-2 text-black"
+                  data-dropdown-toggle="dropdown"
+                >
+                  Services
+                </button>
+                <div
+                  class="hidden bg-white text-base z-5 list-none divide-y divide-gray-100 rounded shadow my-4"
+                  id="dropdown"
+                >
+                  <ul class="py-1" aria-labelledby="dropdown">
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                        >SMM</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="./lead.html"
+                        class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                        >Lead Generate</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="./seo.html"
+                        class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                        >SEO</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="../websiteservice.html"
+                        class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                        >Website Designing</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                        >Branding</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="pr-5">
+                <a class="px-3 py-2 hover:border-b-2" href="../case.html"
+                  >Case study</a
+                >
+              </li>
+              <li class="pr-5">
+                <a class="px-3 py-2 hover:border-b-2" href="../blog.html"
+                  >Blog</a
+                >
+              </li>
+              <li class="pr-5">
+                <a class="px-3 py-2 hover:border-b-2" href="../contact.html"
+                  >Contacts</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <a
+            href="#"
+            class="ml-auto my-auto text-medium bg-white text-red-400 px-3 py-2 rounded-2xl flex h-10 hover:bg-green-500 hover:text-white border-none"
+            ><span class="px-2 text-sm md:text-xl">MEDGROW</span>
+          </a>
+        </div>
+        <!-- moblie nav bar -->
+        <div class="hidden" id="mobile-Menu">
+          <ul
+            class="font-bold text-white mt-10 grid place-items-center lg:hidden"
+          >
+            <li class="mt-2">
+              <a class="py-2" href="../../index.html">Home</a>
+            </li>
+            <li class="mt-2">
+              <a class="py-2" href="../about.html">About</a>
+            </li>
+            <li class="mt-2">
+              <a class="py-2" href="#">Services</a>
+            </li>
+            <li class="mt-2">
+              <a class="py-2" href="../case.html">Case study</a>
+            </li>
+            <li class="mt-2">
+              <a class="py-2" href="../blog.html">Blog</a>
+            </li>
+            <li class="mt-2">
+              <a class="py-2 hover:border-b-2" href="../contact.html"
+                >Contacts</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================== NAVIGATION BAR (END) ======================================= -->
+    <!-- ==================================== SERVICES ================================================= -->
+    <div class="grid md:grid-cols-4 md:gap-10 gap-5 mb-5">
+      <div class="w-10/12 flex justify-center align-middle flex-col mx-auto">
+        <div class="p-5 flex flex-col gap-5">
+          <p class="text-red-600">
+            D-Grow Marketing Agency | The Best Digital Marketing Agency Near Me
+          </p>
+          <h2 class="text-black text-4xl font-bold">What do we offer?</h2>
+          <p class="text-red-600">
+            Maximize Your ROI & Reach Your Business Goal With Our Professional
+            Digital Marketing Solutions!
+          </p>
+        </div>
+      </div>
+      <a
+        href="./smm.html"
+        class="w-10/12 flex justify-center align-middle flex-col mx-auto bg-red-600"
+      >
+        <div class="p-5 flex flex-col gap-5">
+          <h2 class="text-black text-4xl font-bold">
+            Social Media Marketing + Management
+          </h2>
+          <p class="text-white">
+            Elevate your brand presence and engage with your audience across
+            various social media platforms through our strategic SMM services.
+          </p>
+        </div>
+      </a>
+      <a
+        href="./seo.html"
+        class="w-10/12 flex justify-center align-middle flex-col mx-auto bg-red-600"
+      >
+        <div class="p-5 flex flex-col gap-5">
+          <h2 class="text-black text-4xl font-bold">SEO Services</h2>
+          <p class="text-white">
+            Improve your website's visibility and drive organic traffic with our
+            tailored SEO strategies to boost your search engine rankings.
+          </p>
+        </div>
+      </a>
+      <a
+        href="./lead.html"
+        class="w-10/12 flex justify-center align-middle flex-col mx-auto bg-red-600"
+      >
+        <div class="p-5 flex flex-col gap-5">
+          <h2 class="text-black text-4xl font-bold">Lead Generate</h2>
+          <p class="text-white">
+            Maximize your online reach and generate quality leads through
+            targeted Pay-Per-Click advertising campaigns crafted to deliver
+            optimal results.
+          </p>
+        </div>
+      </a>
+      <a
+        href="../websiteservice.html"
+        class="w-10/12 flex justify-center align-middle flex-col mx-auto bg-red-600"
+      >
+        <div class="p-5 flex flex-col gap-5">
+          <h2 class="text-black text-4xl font-bold">
+            Web Designing & Development
+          </h2>
+          <p class="text-white">
+            Create stunning and user-friendly websites that captivate your
+            audience and drive conversions, tailored to your business needs.
+          </p>
+        </div>
+      </a>
+      <a
+        href="./branding.html"
+        class="w-10/12 flex justify-center align-middle flex-col mx-auto bg-red-600"
+      >
+        <div class="p-5 flex flex-col gap-5">
+          <h2 class="text-black text-4xl font-bold">Personal Branding</h2>
+          <p class="text-white">
+            Elevate your personal brand with our tailored digital marketing
+            strategies. We craft compelling online narratives that resonate with
+            your audience and amplify your influence. Let's build your brand's
+            legacy together, one digital step at a time.
+          </p>
+        </div>
+      </a>
+    </div>
+
+    <!-- ==================================== SERVICES (END)================================================= -->
+
+    <footer
+      class="bg-black text-white grid grid-cols-1 px-14 pt-14 pb-4 md:grid-cols-3 gap-4"
+    >
+      <div class="md:pl-20">
+        <img src="../../asset/images/d-grow-footer.png" alt="" />
+        <p class="text-xl font-semibold pl-2 mt-3">
+          Elevating Brands, Driving Growth with innovation and creativity, we
+          turn your digital aspirations into reality.
+        </p>
+      </div>
+      <div class="grid grid-rows-3">
+        <p class="text-xl font-semibold">D-Grow Marketing Agency,</p>
+        <p class="text-xl font-semibold">
+          Address: Plot No. 141, SF No: 14/3 Radha Avenue Main Road,
+          Valasaravakkam, Chennai - 600087
+        </p>
+        <a href="tel:+917373509585"
+          ><p class="text-xl font-semibold">Phone: +91 7373509585</p></a
+        >
+        <a href="enquiry@dgrowmarketing.com"
+          ><p class="text-xl font-semibold">
+            Email: enquiry@dgrowmarketing.com
+          </p></a
+        >
+      </div>
+      <div class="md:pr-28">
+        <ul class="flex flex-col gap-3">
+          <li class="text-xl font-semibold text-center md:text-end">
+            <a href="#">Home</a>
+          </li>
+          <li class="text-xl font-semibold text-center md:text-end">
+            <a href="#">About Us</a>
+          </li>
+          <li class="text-xl font-semibold text-center md:text-end">
+            <a href="#">Services</a>
+          </li>
+          <li class="text-xl font-semibold text-center md:text-end">
+            <a href="#">SEO Service</a>
+          </li>
+          <li class="text-xl font-semibold text-center md:text-end">
+            <a href="#">Social Media Marketing</a>
+          </li>
+          <li class="text-xl font-semibold text-center md:text-end">
+            <a href="#">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <div class="w-full h-1 bg-red-600"></div>
+    <div class="w-full bg-black text-white text-center py-3 px-3">
+      <a href="#" class="text-center"
+        >Copyright © 2024 D-Grow Marketing Agency</a
+      >
+    </div>
+    <!-- script -->
+    <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="../../asset/js/script.js"></script>
+    <script>
+      function updateHiddenFields() {
+        // Collect selected services
+        let selectedServices = [];
+        document
+          .querySelectorAll(".option-checkbox:checked")
+          .forEach((checkbox) => {
+            selectedServices.push(checkbox.value);
+          });
+        document.getElementById("selectedServices").value =
+          selectedServices.join(", ");
+
+        // Collect selected budget (only one can be selected)
+        let selectedBudget = "";
+        document
+          .querySelectorAll(".budget-checkbox:checked")
+          .forEach((checkbox) => {
+            selectedBudget = checkbox.value;
+          });
+        document.getElementById("selectedBudget").value = selectedBudget;
+      }
+
+      // Attach event listeners to checkboxes to update hidden fields on change
+      document
+        .querySelectorAll(".option-checkbox, .budget-checkbox")
+        .forEach((checkbox) => {
+          checkbox.addEventListener("change", updateHiddenFields);
+        });
+
+      const mobileMenu = () => {
+        const menu = document.getElementById("mobile-Menu");
+
+        if (menu.classList.contains("hidden")) {
+          menu.classList.remove("hidden");
+        } else {
+          menu.classList.add("hidden");
+        }
+      };
+      function toggleDropdown() {
+        document.getElementById("dropdown-menu").classList.toggle("hidden");
+      }
+
+      const services = [
+        "Social Media Marketing(SMM)",
+        "Digital Marketing services",
+        "SEO Services",
+        "Google Ads (PPC)",
+        "SEO Content Writing",
+        "Product Listing + Amazon",
+        "Graphic Designing",
+        "Digital Marketing Consultation",
+        "Political Ads",
+        "Web Designing & Development",
+        "Lead Generation",
+        "WhatsApp Marketing",
+        "Email Marketing",
+        "Marketing Automation",
+        "Personal Branding",
+        "GMB Listing & Ranking",
+        "Lead Nurturing",
+        "Video Production (Personal Branding)",
+      ];
+
+      const dropdownMenu = document.getElementById("dropdown-menu");
+      const dropdownOptions = document.getElementById("dropdown-options");
+      const selectedOptionsBox = document.getElementById("selected-options");
+
+      // Toggle Dropdown Visibility
+      function toggleDropdown() {
+        dropdownMenu.classList.toggle("hidden");
+      }
+
+      // Render Dropdown Options
+      function renderDropdown() {
+        dropdownOptions.innerHTML = "";
+        services.forEach((service) => {
+          const option = document.createElement("label");
+          option.className =
+            "flex items-center p-2 hover:bg-gray-100 cursor-pointer";
+          option.innerHTML = `
+            <input type="checkbox" value="${service}" class="mr-2 option-checkbox"> ${service}
+          `;
+          dropdownOptions.appendChild(option);
+        });
+
+        // Add Event Listeners
+        document.querySelectorAll(".option-checkbox").forEach((checkbox) => {
+          checkbox.addEventListener("change", (e) => handleSelection(e.target));
+        });
+      }
+
+      // Handle Selection
+      function handleSelection(checkbox) {
+        if (checkbox.checked) {
+          addSelectedOption(checkbox.value);
+          checkbox.parentElement.classList.add("hidden"); // Hide selected option
+        }
+      }
+
+      // Add Selected Option
+      function addSelectedOption(service) {
+        if (selectedOptionsBox.querySelector(".text-gray-500")) {
+          selectedOptionsBox.innerHTML = ""; // Remove placeholder text
+        }
+
+        const selectedItem = document.createElement("div");
+        selectedItem.className =
+          "flex items-center bg-red-500 text-white px-2 py-1 rounded m-1";
+        selectedItem.innerHTML = `
+          <span class="border-r border-gray pr-2">${service}</span>
+          <button onclick="removeSelectedOption('${service}', this)" class="ml-2 bg-gray-100 text-black  px-2 rounded-full text-xs py-1 "><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+        `;
+
+        selectedOptionsBox.appendChild(selectedItem);
+      }
+
+      // Remove Selected Option
+      function removeSelectedOption(service, button) {
+        button.parentElement.remove(); // Remove selected item
+
+        // Unhide the option in the dropdown
+        document.querySelectorAll(".option-checkbox").forEach((checkbox) => {
+          if (checkbox.value === service) {
+            checkbox.parentElement.classList.remove("hidden");
+            checkbox.checked = false;
+          }
+        });
+
+        // Show placeholder if no selected items
+        if (selectedOptionsBox.childElementCount === 0) {
+          selectedOptionsBox.innerHTML = `<span class="text-gray-500"></span>`;
+        }
+      }
+
+      // Initialize Dropdown
+      renderDropdown();
+      // ckeck box
+      const checkboxes = document.querySelectorAll(".budget-checkbox");
+      const checkDivs = document.querySelectorAll("label div");
+
+      checkboxes.forEach((checkbox, index) => {
+        checkbox.addEventListener("change", () => {
+          checkboxes.forEach((cb, i) => {
+            if (cb !== checkbox) {
+              cb.checked = false;
+              checkDivs[i].classList.remove("bg-red-500", "border-red-500");
+              checkDivs[i].children[0].classList.add("hidden");
+            }
+          });
+
+          if (checkbox.checked) {
+            checkDivs[index].classList.add("bg-red-500", "border-red-500");
+            checkDivs[index].children[0].classList.remove("hidden");
+          } else {
+            checkDivs[index].classList.remove("bg-red-500", "border-red-500");
+            checkDivs[index].children[0].classList.add("hidden");
+          }
+        });
+      });
+
+      document
+        .getElementById("myForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          let formData = new FormData(this);
+
+          fetch(this.action, {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.result === "success") {
+                alert("Form submitted successfully! 🎉");
+                window.location.reload();
+              } else {
+                alert("Form submission failed. Please try again.");
+              }
+            })
+            .catch((error) => {
+              alert(
+                "An error occurred. Please check your connection and try again."
+              );
+              console.error("Error:", error);
+            });
+        });
+      // counder
+      const counters = document.querySelectorAll(".counter span");
+      const container = document.querySelector(".counters");
+      let active = false;
+
+      window.addEventListener("scroll", () => {
+        if (
+          window.pageYOffset >
+            container.offsetTop - container.offsetHeight - 500 &&
+          !active
+        ) {
+          counters.forEach((counter) => {
+            counter.innerHTML = 0;
+            let count = 0;
+
+            const updateCount = () => {
+              const target = parseInt(counter.dataset.count);
+              if (count < target) {
+                count++;
+                counter.innerHTML = count;
+                setTimeout(updateCount, 15);
+              } else {
+                counter.innerHTML = target;
+              }
+            };
+
+            updateCount();
+          });
+
+          active = true;
+        } else if (
+          window.pageYOffset <
+            container.offsetTop - container.offsetHeight - 500 &&
+          active
+        ) {
+          counters.forEach((counter) => {
+            counter.innerHTML = 0;
+          });
+          active = false;
+        }
+      });
+
+      const arrow = document.getElementById("scrollArrow");
+      const firstSection = document.querySelector(".hero");
+
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > firstSection.offsetHeight) {
+          arrow.style.display = "block";
+        } else {
+          arrow.style.display = "none";
+        }
+      });
+    </script>
+  </body>
 </html>

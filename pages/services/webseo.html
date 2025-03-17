@@ -9,8 +9,7 @@
 
     <!-- =============== js ======================== -->
     <!-- tailwind -->
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- =============== js (END) ======================== -->
     <title>D-Grow</title>
   </head>
@@ -61,12 +60,15 @@
                   >
                 </li>
                 <li class="pr-5">
-                  <button
+                  <a href="./service.html" class="px-3 pb-2 text-black">
+                    Services</a
+                  >
+                  <!-- <button
                     class="px-3 pb-2 text-black"
                     data-dropdown-toggle="dropdown"
                   >
                     Services
-                  </button>
+                  </button> -->
                   <div
                     class="hidden bg-white text-base z-5 list-none divide-y divide-gray-100 rounded shadow my-4"
                     id="dropdown"
@@ -943,7 +945,7 @@
       <h2 class="text-5xl font-bold text-red-600 my-14 text-center">
         OUR WORK PROCESS
       </h2>
-      <div class="md:px-52" id="work-process">
+      <div class="relative z-50 md:px-52" id="work-process">
         <ul>
           <li>
             <span class="bg-red-600 text-white font-bold">1</span>
@@ -1018,7 +1020,7 @@
         <div class="w-20 h-20 bg-red-200 rounded-full"></div>
       </div>
       <div
-        class="hidden lg:flex absolute bottom-0 -right-30 -z-100 overflow-hidden over-data"
+        class="hidden lg:flex absolute bottom-0 -right-30 -z-50 overflow-hidden over-data"
       >
         <div
           class="w-96 h-96 bg-red-200 rounded-full my-3 grid place-items-center"

@@ -9,8 +9,7 @@
 
     <!-- =============== js ======================== -->
     <!-- tailwind -->
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- =============== js (END) ======================== -->
     <title>D-Grow</title>
   </head>
@@ -722,6 +721,27 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="../../asset/js/script.js"></script>
     <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const dropdownButton = document.querySelector(
+          "[data-dropdown-toggle='dropdown']"
+        );
+        const dropdownMenu = document.getElementById("dropdown");
+
+        dropdownButton.addEventListener("click", function () {
+          dropdownMenu.classList.toggle("hidden"); // Show/hide dropdown
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener("click", function (event) {
+          if (
+            !dropdownButton.contains(event.target) &&
+            !dropdownMenu.contains(event.target)
+          ) {
+            dropdownMenu.classList.add("hidden");
+          }
+        });
+      });
+
       function updateHiddenFields() {
         // Collect selected services
         let selectedServices = [];

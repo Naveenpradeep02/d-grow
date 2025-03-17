@@ -9,7 +9,12 @@ body {
   initial-value: 0;
   inherits: false;
 }
-
+.innerbox {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.447);
+}
+.innerbox img {
+  width: 50%;
+}
 #work-process {
   margin-bottom: 150px;
 }
@@ -240,6 +245,9 @@ body {
 /* ================================================================================== */
 
 @media screen and (max-width: 575px) {
+  .innerbox {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
+  }
   #work-process {
     margin-bottom: 150px;
   }
@@ -322,6 +330,9 @@ body {
   }
 }
 @media (min-width: 576px) and (max-width: 767px) {
+  .innerbox {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
+  }
   #work-process {
     margin-bottom: 150px;
   }

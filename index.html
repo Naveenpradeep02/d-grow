@@ -6,10 +6,12 @@
     <!-- =============== CSS ======================== -->
     <link rel="stylesheet" href="./asset/css/style.css" />
     <link rel="shotcut icon" href="./asset/images/d-grow-footer.png" />
+    <script defer src="./asset/js/script.js"></script>
 
     <!-- =============== js ======================== -->
     <!-- tailwind -->
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"
@@ -58,15 +60,21 @@
                   >About</a
                 >
               </li>
-              <li class="pr-5">
-                <button
+              <li class="relative pr-5">
+                <a
+                  href="./pages/services/service.html"
+                  class="px-3 pb-2 hover:border-b-2"
+                >
+                  Services</a
+                >
+                <!-- <button
                   class="px-3 pb-2 hover:border-b-2"
                   data-dropdown-toggle="dropdown"
                 >
                   Services
-                </button>
-                <div
-                  class="hidden bg-white text-base z-5 list-none divide-y divide-gray-100 rounded shadow my-4"
+                </button> -->
+                <!-- <div
+                  class="hidden bg-white text-base z-10 absolute w-48 list-none divide-y divide-gray-100 rounded shadow my-4"
                   id="dropdown"
                 >
                   <ul class="py-1" aria-labelledby="dropdown">
@@ -106,8 +114,8 @@
                       >
                     </li>
                   </ul>
-                </div>
-              </li>
+                </div> -->
+                <!-- </li>
               <li class="pr-5">
                 <a class="px-3 py-2 hover:border-b-2" href="./pages/case.html"
                   >Case study</a
@@ -117,7 +125,9 @@
                 <a class="px-3 py-2 hover:border-b-2" href="./pages/blog.html"
                   >Blog</a
                 >
+              </li> -->
               </li>
+
               <li class="pr-5">
                 <a
                   class="px-3 py-2 hover:border-b-2"
@@ -129,7 +139,7 @@
           </div>
 
           <a
-            href="#"
+            href="#medgrow"
             class="ml-auto my-auto text-medium bg-white text-red-400 px-3 py-2 rounded-2xl flex h-10 hover:bg-green-500 hover:text-white border-none"
             ><span class="px-2 text-sm md:text-xl">MEDGROW</span>
           </a>
@@ -148,12 +158,12 @@
             <li class="mt-2">
               <a class="py-2" href="./pages/services/service.html">Services</a>
             </li>
-            <li class="mt-2">
+            <!-- <li class="mt-2">
               <a class="py-2" href="./pages/case.html">Case study</a>
             </li>
             <li class="mt-2">
               <a class="py-2" href="./pages/blog.html">Blog</a>
-            </li>
+            </li> -->
             <li class="mt-2">
               <a class="py-2 hover:border-b-2" href="./pages/contact.html"
                 >Contacts</a
@@ -248,9 +258,8 @@
         <div
           class="w-full max-w-5xl mx-auto px-4 md:px-6 py-24 flex flex-col items-center"
         >
-          <main class="grid gap-12 md:grid-cols-4 md:gap-16">
-            <!-- Block #1 -->
-            <article>
+          <div class="grid gap-12 md:grid-cols-4 md:gap-16 counters">
+            <div class="counter">
               <div
                 class="w-14 h-14 rounded shadow-md bg-white flex justify-center items-center rotate-3 mb-6"
               >
@@ -263,8 +272,8 @@
                       y1="0%"
                       y2="100%"
                     >
-                      <stop offset="0%" stop-color="#A5B4FC" />
-                      <stop offset="100%" stop-color="#4F46E5" />
+                      <stop offset="0%" stop-color="#e8000c" />
+                      <stop offset="100%" stop-color="#e8000c" />
                     </linearGradient>
                     <linearGradient
                       id="icon1-b"
@@ -274,7 +283,7 @@
                       y2="100%"
                     >
                       <stop offset="0%" stop-color="#EEF2FF" />
-                      <stop offset="100%" stop-color="#C7D2FE" />
+                      <stop offset="100%" stop-color="#e8000c" />
                     </linearGradient>
                   </defs>
                   <g fill="none" fill-rule="nonzero">
@@ -291,27 +300,20 @@
                   </g>
                 </svg>
               </div>
-              <h2>
+              <h1 class="text-slate-700 text-5xl font-extrabold mb-2">
                 <span
-                  class="flex tabular-nums text-slate-900 text-5xl font-extrabold mb-2 transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
-                  x-data="{ shown: false }"
-                  x-intersect.once="shown = true"
-                  :class="shown && '[--num:300]'"
-                >
-                  <span class="supports-[counter-set]:sr-only">300</span>K+
-                </span>
-                <span
-                  class="inline-flex text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-red-300 mb-2"
-                  >Leads</span
-                >
-              </h2>
-              <p class="text-sm text-slate-500">
-                Many desktop publishing packages and web page editors now use
-                Pinky as their default model text.
-              </p>
-            </article>
-            <!-- Block #2 -->
-            <article>
+                  data-count="300"
+                  class="text-slate-900 text-5xl font-extrabold mb-2 ]"
+                ></span
+                >K
+              </h1>
+              <h3
+                class="inline-flex text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-red-300 mb-2"
+              >
+                Leads
+              </h3>
+            </div>
+            <div class="counter">
               <div
                 class="w-14 h-14 rounded shadow-md bg-white flex justify-center items-center -rotate-3 mb-6"
               >
@@ -324,8 +326,8 @@
                       y1="0%"
                       y2="100%"
                     >
-                      <stop offset="0%" stop-color="#A5B4FC" />
-                      <stop offset="100%" stop-color="#4F46E5" />
+                      <stop offset="0%" stop-color="#fff" />
+                      <stop offset="100%" stop-color="#e8000c" />
                     </linearGradient>
                   </defs>
                   <g fill="none" fill-rule="nonzero">
@@ -336,27 +338,20 @@
                   </g>
                 </svg>
               </div>
-              <h2>
+              <h1 class="text-slate-700 text-5xl font-extrabold mb-2">
                 <span
-                  class="flex tabular-nums text-slate-900 text-5xl font-extrabold mb-2 transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
-                  x-data="{ shown: false }"
-                  x-intersect.once="shown = true"
-                  :class="shown && '[--num:100]'"
-                >
-                  <span class="supports-[counter-set]:sr-only">100</span>M+
-                </span>
-                <span
-                  class="inline-flex text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-red-300 mb-2"
-                  >Organic Traffic</span
-                >
-              </h2>
-              <p class="text-sm text-slate-500">
-                Many desktop publishing packages and web page editors now use
-                Pinky as their default model text.
-              </p>
-            </article>
-            <!-- Block #3 -->
-            <article>
+                  data-count="100"
+                  class="text-slate-700 text-5xl font-extrabold mb-2"
+                  >0</span
+                >M
+              </h1>
+              <h3
+                class="inline-flex text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-red-300 mb-2"
+              >
+                Organic Traffic
+              </h3>
+            </div>
+            <div class="counter">
               <div
                 class="w-14 h-14 rounded shadow-md bg-white flex justify-center items-center -rotate-3 mb-6"
               >
@@ -369,8 +364,8 @@
                       y1="0%"
                       y2="100%"
                     >
-                      <stop offset="0%" stop-color="#A5B4FC" />
-                      <stop offset="100%" stop-color="#4F46E5" />
+                      <stop offset="0%" stop-color="#e8000c" />
+                      <stop offset="100%" stop-color="##e8000c" />
                     </linearGradient>
                   </defs>
                   <g fill="none" fill-rule="nonzero">
@@ -381,27 +376,20 @@
                   </g>
                 </svg>
               </div>
-              <h2>
+              <h1 class="text-slate-700 text-5xl font-extrabold mb-2">
                 <span
-                  class="flex tabular-nums text-slate-900 text-5xl font-extrabold mb-2 transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
-                  x-data="{ shown: false }"
-                  x-intersect.once="shown = true"
-                  :class="shown && '[--num:60]'"
-                >
-                  <span class="supports-[counter-set]:sr-only">60</span>DAYS
-                </span>
-                <span
-                  class="inline-flex text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-red-300 mb-2"
-                  >Rank On Google's 1st Page</span
-                >
-              </h2>
-              <p class="text-sm text-slate-500">
-                Many desktop publishing packages and web page editors now use
-                Pinky as their default model text.
-              </p>
-            </article>
-            <!-- Block #4 -->
-            <article>
+                  data-count="60"
+                  class="text-slate-700 text-5xl font-extrabold mb-2"
+                  >0</span
+                >DAYS
+              </h1>
+              <h3
+                class="inline-flex text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-red-300 mb-2"
+              >
+                Rank On Google's 1st Page
+              </h3>
+            </div>
+            <div class="counter">
               <div
                 class="w-14 h-14 rounded shadow-md bg-white flex justify-center items-center -rotate-3 mb-6"
               >
@@ -414,8 +402,8 @@
                       y1="0%"
                       y2="100%"
                     >
-                      <stop offset="0%" stop-color="#A5B4FC" />
-                      <stop offset="100%" stop-color="#4F46E5" />
+                      <stop offset="0%" stop-color="#fff" />
+                      <stop offset="100%" stop-color="#e8000c" />
                     </linearGradient>
                   </defs>
                   <g fill="none" fill-rule="nonzero">
@@ -426,26 +414,16 @@
                   </g>
                 </svg>
               </div>
-              <h2>
-                <span
-                  class="flex tabular-nums text-slate-900 text-5xl font-extrabold mb-2 transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
-                  x-data="{ shown: false }"
-                  x-intersect.once="shown = true"
-                  :class="shown && '[--num:32]'"
-                >
-                  <span class="supports-[counter-set]:sr-only">32</span>DAYS
-                </span>
-                <span
-                  class="inline-flex text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-red-300 mb-2"
-                  >List Your GMB In Google</span
-                >
-              </h2>
-              <p class="text-sm text-slate-500">
-                Many desktop publishing packages and web page editors now use
-                Pinky as their default model text.
-              </p>
-            </article>
-          </main>
+              <h1 class="text-slate-700 text-5xl font-extrabold mb-2">
+                <span data-count="32">0</span>DAYS
+              </h1>
+              <h3
+                class="inline-flex text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-red-300 mb-2"
+              >
+                List Your GMB In Google
+              </h3>
+            </div>
+          </div>
         </div>
       </section>
     </div>
@@ -672,7 +650,7 @@
       <h2 class="text-5xl font-bold text-red-600 my-14 text-center">
         OUR WORK PROCESS
       </h2>
-      <div class="md:px-52" id="work-process">
+      <div class="relative z-30 md:px-52" id="work-process">
         <ul>
           <li>
             <span class="bg-red-600 text-white font-bold">1</span>
@@ -747,13 +725,14 @@
         <div class="w-20 h-20 bg-red-200 rounded-full"></div>
       </div>
       <div
-        class="hidden lg:flex absolute bottom-0 -right-30 -z-100 overflow-hidden over-data"
+        class="hidden lg:flex absolute bottom-0 -right-30 -z-50 overflow-hidden over-data"
       >
         <div
           class="w-96 h-96 bg-red-200 rounded-full my-3 grid place-items-center"
         >
           <div class="w-80 h-80 bg-red-300 rounded-full"></div>
         </div>
+
         <div class="w-20 h-20 bg-red-200 rounded-full"></div>
       </div>
     </section>
@@ -775,6 +754,7 @@
     <!-- ===================================== CTA2 BTN (END) ======================================= -->
     <!--====================================MEDGROW pranding =========================================================-->
     <section
+      id="medgrow"
       class="px-5 py-10 relative mx-auto md:py-20 md:px-15 bg-red-50 grid place-items-center h-lvh"
     >
       <div class="circle">
@@ -1611,8 +1591,8 @@
     </div>
     <!-- ================================================== script ========================================= -->
     <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
+
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="./asset/js/script.js"></script>
     <script>
       const mobileMenu = () => {
         const menu = document.getElementById("mobile-Menu");
@@ -1623,7 +1603,168 @@
           menu.classList.add("hidden");
         }
       };
+      var typed = new Typed(".auto-type", {
+        strings: [
+          "Digital Marketing",
+          "Social Media Marketing",
+          "LEAD GENERATION",
+          "SEO",
+          "WEBSITE DESIGNING",
+          "BRANDING",
+        ],
+        typeSpeed: 150,
+        backSpeed: 150,
+        loop: true,
+      });
+
+      const text = document.querySelector(".circle-text p");
+
+      text.innerHTML = text.innerText
+        .split("")
+        .map(
+          (char, i) =>
+            `<span style="transform:rotate(${i * 5.7}deg)">${char}</span>`
+        )
+        .join("");
+
+      let sliderContainer = document.querySelector("#sliderContainer");
+      let slider = document.querySelector("#slider");
+      let cards = document.querySelectorAll(".list-card");
+      let elementShow = 3;
+      let sliderContainerWidth = sliderContainer.clientWidth;
+
+      if (document.body.clientWidth <= 768) {
+        elementShow = 1;
+      }
+
+      let cardWidth = sliderContainerWidth / elementShow;
+      let cardMargin = 0;
+
+      slider.style.width = (cardWidth + cardMargin) * cards.length + "px";
+      slider.style.transition = "margin 1s ease-in-out";
+
+      cards.forEach((card) => {
+        card.style.width = cardWidth + "px";
+        card.style.marginRight = cardMargin + "px";
+      });
+
+      if (!slider.style.marginLeft) {
+        slider.style.marginLeft = "0px";
+      }
+
+      const next = () => {
+        let currentMargin = parseInt(slider.style.marginLeft) || 0;
+        let maxMargin = -(
+          (cardWidth + cardMargin) *
+          (cards.length - elementShow)
+        );
+
+        if (currentMargin > maxMargin) {
+          slider.style.marginLeft = `${
+            currentMargin - (cardWidth + cardMargin)
+          }px`;
+        } else {
+          slider.style.marginLeft = "0px";
+        }
+      };
+
+      const prev = () => {
+        let currentMargin = parseInt(slider.style.marginLeft) || 0;
+
+        if (currentMargin < 0) {
+          slider.style.marginLeft = `${
+            currentMargin + (cardWidth + cardMargin)
+          }px`;
+        }
+      };
+
+      // Auto Slider
+      let autoSlide = setInterval(next, 3000);
+
+      // Pause on hover
+      sliderContainer.addEventListener("mouseenter", () => {
+        clearInterval(autoSlide);
+      });
+
+      sliderContainer.addEventListener("mouseleave", () => {
+        autoSlide = setInterval(next, 5000);
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const dropdownButton = document.querySelector(
+          "[data-dropdown-toggle='dropdown']"
+        );
+        const dropdownMenu = document.getElementById("dropdown");
+
+        dropdownButton.addEventListener("click", function () {
+          dropdownMenu.classList.toggle("hidden"); // Show/hide dropdown
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener("click", function (event) {
+          if (
+            !dropdownButton.contains(event.target) &&
+            !dropdownMenu.contains(event.target)
+          ) {
+            dropdownMenu.classList.add("hidden");
+          }
+        });
+      });
+
+      const counters = document.querySelectorAll(".counter span");
+      const container = document.querySelector(".counters");
+      let active = false;
+
+      window.addEventListener("scroll", () => {
+        if (
+          window.pageYOffset >
+            container.offsetTop - container.offsetHeight - 500 &&
+          !active
+        ) {
+          counters.forEach((counter) => {
+            counter.innerHTML = 0;
+            let count = 0;
+
+            const updateCount = () => {
+              const target = parseInt(counter.dataset.count);
+              if (count < target) {
+                count++;
+                counter.innerHTML = count;
+                setTimeout(updateCount, 15);
+              } else {
+                counter.innerHTML = target;
+              }
+            };
+
+            updateCount();
+          });
+
+          active = true;
+        } else if (
+          window.pageYOffset <
+            container.offsetTop - container.offsetHeight - 500 &&
+          active
+        ) {
+          counters.forEach((counter) => {
+            counter.innerHTML = 0;
+          });
+          active = false;
+        }
+      });
+
+      const arrow = document.getElementById("scrollArrow");
+      const firstSection = document.querySelector(".hero");
+
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > firstSection.offsetHeight) {
+          arrow.style.display = "block";
+        } else {
+          arrow.style.display = "none";
+        }
+      });
+      // menu
     </script>
+
     <!-- ================================================== script (ENDS)========================================= -->
   </body>
 </html>

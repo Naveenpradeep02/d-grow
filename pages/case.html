@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- =============== CSS ======================== -->
+    <link rel="stylesheet" href="../asset/css/style.css" />
+    <link rel="shotcut icon" href="../asset/images/d-grow-footer.png" />
+
+    <!-- =============== js ======================== -->
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- =============== js (END) ======================== -->
+    <title>D-Grow</title>
+  </head>
+  <body>
+    <div class="bg-red-100">
+      <!-- ===================================== NAVIGATION BAR ======================================= -->
+
+      <section class="bg-red-600 rounded-2xl m-2 p-5 sticky top-0 z-40 md:m-10">
+        <div class="container mx-auto">
+          <!-- navbar -->
+          <div class="flex">
+            <a
+              href="#"
+              class="logo-imgs w-44 pr-5 border-r mr-5 border-red-900"
+            >
+              <img class="w-44" src="../asset/images/d-growlogo.png" alt="" />
+            </a>
+            <div class="my-auto">
+              <button class="lg:hidden" onclick="mobileMenu()">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+              </button>
+              <ul class="font-bold text-white hidden lg:flex">
+                <li class="pr-5">
+                  <a class="px-3 py-2 hover:border-b-2" href="../index.html"
+                    >Home</a
+                  >
+                </li>
+                <li class="pr-5">
+                  <a class="px-3 py-2 text-black" href="./about.html">About</a>
+                </li>
+                <li class="pr-5">
+                  <button
+                    class="px-3 pb-2 hover:border-b-2"
+                    data-dropdown-toggle="dropdown"
+                  >
+                    Services
+                  </button>
+                  <div
+                    class="hidden bg-white text-base z-5 list-none divide-y divide-gray-100 rounded shadow my-4"
+                    id="dropdown"
+                  >
+                    <ul class="py-1" aria-labelledby="dropdown">
+                      <li>
+                        <a
+                          href="./services/smm.html"
+                          class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                          >SMM</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="./services/lead.html"
+                          class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                          >Lead Generate</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="./services/seo.html"
+                          class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                          >SEO</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="./websiteservice.html"
+                          class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                          >Website Designing</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="./services/branding.html"
+                          class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                          >Branding</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="pr-5">
+                  <a class="px-3 py-2 hover:border-b-2" href="#">Case study</a>
+                </li>
+                <li class="pr-5">
+                  <a class="px-3 py-2 hover:border-b-2" href="./blog.html"
+                    >Blog</a
+                  >
+                </li>
+                <li class="pr-5">
+                  <a class="px-3 py-2 hover:border-b-2" href="./contact.html"
+                    >Contacts</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <a
+              href="#"
+              class="ml-auto my-auto text-medium bg-white text-red-400 px-3 py-2 rounded-2xl flex h-10 hover:bg-green-500 hover:text-white border-none"
+              ><span class="px-2 text-sm md:text-xl">MEDGROW</span>
+            </a>
+          </div>
+          <!-- moblie nav bar -->
+          <div class="hidden" id="mobile-Menu">
+            <ul
+              class="font-bold text-white mt-10 grid place-items-center lg:hidden"
+            >
+              <li class="mt-2">
+                <a class="py-2" href="../index.html">Home</a>
+              </li>
+              <li class="mt-2">
+                <a class="py-2" href="./about.html">About</a>
+              </li>
+              <li class="mt-2">
+                <a class="py-2" href="./services/service.html">Services</a>
+              </li>
+              <li class="mt-2">
+                <a class="py-2" href="#">Case study</a>
+              </li>
+              <li class="mt-2">
+                <a class="py-2" href="./blog.html">Blog</a>
+              </li>
+              <li class="mt-2">
+                <a
+                  class="py-2 hover:border-b-2"
+                  href="./contact.html
+                  "
+                  >Contacts</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- ===================================== NAVIGATION BAR (END)======================================= -->
+      <!-- ==================================== SERVICE HEADER ============================================ -->
+      <section class="rounded-2xl p-5 h-96">
+        <div class="container mx-auto">
+          <div class="flex flex-col items-center">
+            <h1 class="text-4xl md:text-8xl font-bold text-black pt-20">
+              Case study
+            </h1>
+          </div>
+        </div>
+      </section>
+      <!-- ==================================== SERVICE HEADER (END)============================================ -->
+    </div>
+    <!-- ==================================== FOOTER ================================================= -->
+    <footer
+      class="bg-black text-white grid grid-cols-1 px-14 pt-14 pb-4 md:grid-cols-3 gap-4"
+    >
+      <div class="md:pl-20">
+        <img src="../asset/images/d-grow-footer.png" alt="" />
+        <p class="text-xl font-semibold pl-2 mt-3">
+          Elevating Brands, Driving Growth with innovation and creativity, we
+          turn your digital aspirations into reality.
+        </p>
+      </div>
+      <div class="grid grid-rows-3">
+        <p class="text-xl font-semibold">D-Grow Marketing Agency,</p>
+        <p class="text-xl font-semibold">
+          Address: Plot No. 141, SF No: 14/3 Radha Avenue Main Road,
+          Valasaravakkam, Chennai - 600087
+        </p>
+        <a href="tel:+917373509585"
+          ><p class="text-xl font-semibold">Phone: +91 7373509585</p></a
+        >
+        <a href="enquiry@dgrowmarketing.com"
+          ><p class="text-xl font-semibold">
+            Email: enquiry@dgrowmarketing.com
+          </p></a
+        >
+      </div>
+      <div class="md:pr-24">
+        <ul class="flex flex-col gap-3">
+          <li class="text-xl font-semibold text-center md:text-end">
+            <a href="#">Home</a>
+          </li>
+          <li class="text-xl font-semibold text-center md:text-end">
+            <a href="#">About Us</a>
+          </li>
+          <li class="text-xl font-semibold text-center md:text-end">
+            <a href="#">Services</a>
+          </li>
+          <li class="text-xl font-semibold text-center md:text-end">
+            <a href="#">SEO Service</a>
+          </li>
+          <li class="text-xl font-semibold text-center md:text-end">
+            <a href="#">Social Media Marketing</a>
+          </li>
+          <li class="text-xl font-semibold text-center md:text-end">
+            <a href="#">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <div class="w-full h-1 bg-red-600"></div>
+    <div class="w-full bg-black text-white text-center py-3 px-3">
+      <a href="#" class="text-center"
+        >Copyright © 2024 D-Grow Marketing Agency</a
+      >
+    </div>
+    <div
+      class="fixed bottom-0 right-0 w-14 h-14 rounded-full bg-red-600 flex justify-center items-center mr-5 mb-5 z-20 cursor-pointer"
+    >
+      <h2 class="text-white cursor-pointer font-bold text-3xl">+</h2>
+      <div
+        class="text-white cursor-pointer font-bold text-3xl fixed bottom-16 right-0 w-10 h-10 rounded-full bg-blue-500 flex justify-center items-center mr-7 mb-5 z-20"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-phone"
+        >
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+          />
+        </svg>
+      </div>
+      <div
+        class="text-white cursor-pointer font-bold text-3xl fixed bottom-28 right-0 w-10 h-10 rounded-full bg-green-500 flex justify-center items-center mr-7 mb-5 z-20"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          style="fill: rgb(255, 255, 255); transform: msfilter"
+          class="lucide lucide-whatsapp"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M18.403 5.633A8.919 8.919 0 0 0 12.053 3c-4.948 0-8.976 4.027-8.978 8.977 0 1.582.413 3.126 1.198 4.488L3 21.116l4.759-1.249a8.981 8.981 0 0 0 4.29 1.093h.004c4.947 0 8.975-4.027 8.977-8.977a8.926 8.926 0 0 0-2.627-6.35m-6.35 13.812h-.003a7.446 7.446 0 0 1-3.798-1.041l-.272-.162-2.824.741.753-2.753-.177-.282a7.448 7.448 0 0 1-1.141-3.971c.002-4.114 3.349-7.461 7.465-7.461a7.413 7.413 0 0 1 5.275 2.188 7.42 7.42 0 0 1 2.183 5.279c-.002 4.114-3.349 7.462-7.461 7.462m4.093-5.589c-.225-.113-1.327-.655-1.533-.73-.205-.075-.354-.112-.504.112s-.58.729-.711.879-.262.168-.486.056-.947-.349-1.804-1.113c-.667-.595-1.117-1.329-1.248-1.554s-.014-.346.099-.458c.101-.1.224-.262.336-.393.112-.131.149-.224.224-.374s.038-.281-.019-.393c-.056-.113-.505-1.217-.692-1.666-.181-.435-.366-.377-.504-.383a9.65 9.65 0 0 0-.429-.008.826.826 0 0 0-.599.28c-.206.225-.785.767-.785 1.871s.804 2.171.916 2.321c.112.15 1.582 2.415 3.832 3.387.536.231.954.369 1.279.473.537.171 1.026.146 1.413.089.431-.064 1.327-.542 1.514-1.066.187-.524.187-.973.131-1.067-.056-.094-.207-.151-.43-.263"
+          ></path>
+        </svg>
+      </div>
+      <div
+        class="text-white cursor-pointer font-bold text-3xl fixed bottom-40 right-0 w-10 h-10 rounded-full bg-red-500 flex justify-center items-center mr-7 mb-5 z-20"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-mail-plus"
+        >
+          <path d="M22 13V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h8" />
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+          <path d="M19 16v6" />
+          <path d="M16 19h6" />
+        </svg>
+      </div>
+    </div>
+    <!-- ===================================== Footer (END) ======================================= -->
+    <!-- script -->
+    <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="../asset/js/script.js"></script>
+    <script>
+      const mobileMenu = () => {
+        const menu = document.getElementById("mobile-Menu");
+
+        if (menu.classList.contains("hidden")) {
+          menu.classList.remove("hidden");
+        } else {
+          menu.classList.add("hidden");
+        }
+      };
+
+      function toggleDropdown() {
+        document.getElementById("dropdown-menu").classList.toggle("hidden");
+      }
+      const counters = document.querySelectorAll(".counter span");
+      const container = document.querySelector(".counters");
+      let active = false;
+
+      window.addEventListener("scroll", () => {
+        if (
+          window.pageYOffset >
+            container.offsetTop - container.offsetHeight - 500 &&
+          !active
+        ) {
+          counters.forEach((counter) => {
+            counter.innerHTML = 0;
+            let count = 0;
+
+            const updateCount = () => {
+              const target = parseInt(counter.dataset.count);
+              if (count < target) {
+                count++;
+                counter.innerHTML = count;
+                setTimeout(updateCount, 15);
+              } else {
+                counter.innerHTML = target;
+              }
+            };
+
+            updateCount();
+          });
+
+          active = true;
+        } else if (
+          window.pageYOffset <
+            container.offsetTop - container.offsetHeight - 500 &&
+          active
+        ) {
+          counters.forEach((counter) => {
+            counter.innerHTML = 0;
+          });
+          active = false;
+        }
+      });
+
+      const arrow = document.getElementById("scrollArrow");
+      const firstSection = document.querySelector(".hero");
+
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > firstSection.offsetHeight) {
+          arrow.style.display = "block";
+        } else {
+          arrow.style.display = "none";
+        }
+      });
+
+      function showContent(section) {
+        // Toggle content visibility
+        document
+          .getElementById("vission-content")
+          .classList.toggle("hidden", section !== "vission");
+        document
+          .getElementById("mission-content")
+          .classList.toggle("hidden", section !== "mission");
+
+        // Toggle active styles for buttons
+        document
+          .getElementById("vission-btn")
+          .classList.toggle("bg-red-500", section === "vission");
+        document
+          .getElementById("vission-btn")
+          .classList.toggle("bg-gray-500", section !== "vission");
+
+        document
+          .getElementById("mission-btn")
+          .classList.toggle("bg-red-500", section === "mission");
+        document
+          .getElementById("mission-btn")
+          .classList.toggle("bg-gray-500", section !== "mission");
+      }
+    </script>
+  </body>
+</html>

@@ -182,6 +182,7 @@ body {
 .item {
   width: 200px;
   height: 100px;
+  overflow: hidden;
   background-color: var(--light-color);
   border-radius: 7px;
   position: absolute;
@@ -190,7 +191,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 2px 2px 10px rgb(164, 164, 164);
+  box-shadow: 2px 2px 10px rgba(164, 164, 164, 0.452);
 }
 .item img {
   width: 150px;
@@ -207,40 +208,153 @@ body {
   align-items: center;
   justify-content: center;
   font-family: var(--main-primary-font);
-  box-shadow: 2px 2px 10px rgb(164, 164, 164);
+  box-shadow: 2px 2px 10px rgba(164, 164, 164, 0.326);
 }
 
 .item1,
 .text-slide1 {
-  animation-delay: calc(30s / 8 * (8 - 1) * -1);
+  animation-delay: calc(30s / 8 * (36 - 1) * -1);
 }
 .item2,
 .text-slide2 {
-  animation-delay: calc(30s / 8 * (8 - 2) * -1);
+  animation-delay: calc(30s / 8 * (36 - 2) * -1);
 }
 .item3,
 .text-slide3 {
-  animation-delay: calc(30s / 8 * (8 - 3) * -1);
+  animation-delay: calc(30s / 8 * (36 - 3) * -1);
 }
 .item4,
 .text-slide4 {
-  animation-delay: calc(30s / 8 * (8 - 4) * -1);
+  animation-delay: calc(30s / 8 * (36 - 4) * -1);
 }
 .item5,
 .text-slide5 {
-  animation-delay: calc(30s / 8 * (8 - 5) * -1);
+  animation-delay: calc(30s / 8 * (36 - 5) * -1);
 }
 .item6,
 .text-slide6 {
-  animation-delay: calc(30s / 8 * (8 - 6) * -1);
+  animation-delay: calc(30s / 8 * (36 - 6) * -1);
 }
 .item7,
 .text-slide7 {
-  animation-delay: calc(30s / 8 * (8 - 7) * -1);
+  animation-delay: calc(30s / 8 * (36 - 7) * -1);
 }
 .item8,
 .text-slide8 {
-  animation-delay: calc(30s / 8 * (8 - 8) * -1);
+  animation-delay: calc(30s / 8 * (36 - 8) * -1);
+}
+.item9,
+.text-slide9 {
+  animation-delay: calc(30s / 8 * (36 - 9) * -1);
+}
+.item10,
+.text-slide10 {
+  animation-delay: calc(30s / 8 * (36 - 10) * -1);
+}
+.item11,
+.text-slide11 {
+  animation-delay: calc(30s / 8 * (36 - 11) * -1);
+}
+.item12,
+.text-slide12 {
+  animation-delay: calc(30s / 8 * (36 - 12) * -1);
+}
+.item13,
+.text-slide13 {
+  animation-delay: calc(30s / 8 * (36 - 13) * -1);
+}
+.item14,
+.text-slide14 {
+  animation-delay: calc(30s / 8 * (36 - 14) * -1);
+}
+.item15,
+.text-slide15 {
+  animation-delay: calc(30s / 8 * (36 - 15) * -1);
+}
+
+.item16,
+.text-slide16 {
+  animation-delay: calc(30s / 8 * (36 - 16) * -1);
+}
+.item17,
+.text-slide17 {
+  animation-delay: calc(30s / 8 * (36 - 17) * -1);
+}
+.item18,
+.text-slide18 {
+  animation-delay: calc(30s / 8 * (36 - 18) * -1);
+}
+.item19,
+.text-slide19 {
+  animation-delay: calc(30s / 8 * (36 - 19) * -1);
+}
+.item20,
+.text-slide20 {
+  animation-delay: calc(30s / 8 * (36 - 20) * -1);
+}
+.item21,
+.text-slide21 {
+  animation-delay: calc(30s / 8 * (36 - 21) * -1);
+}
+.item22,
+.text-slide22 {
+  animation-delay: calc(30s / 8 * (36 - 22) * -1);
+}
+.item23,
+.text-slide23 {
+  animation-delay: calc(30s / 8 * (36 - 23) * -1);
+}
+.item24,
+.text-slide24 {
+  animation-delay: calc(30s / 8 * (36 - 24) * -1);
+}
+.item25,
+.text-slide25 {
+  animation-delay: calc(30s / 8 * (36 - 25) * -1);
+}
+.item26,
+.text-slide26 {
+  animation-delay: calc(30s / 8 * (36 - 26) * -1);
+}
+.item27,
+.text-slide27 {
+  animation-delay: calc(30s / 8 * (36 - 27) * -1);
+}
+.item28,
+.text-slide28 {
+  animation-delay: calc(30s / 8 * (36 - 28) * -1);
+}
+.item29,
+.text-slide29 {
+  animation-delay: calc(30s / 8 * (36 - 29) * -1);
+}
+.item30,
+.text-slide30 {
+  animation-delay: calc(30s / 8 * (36 - 30) * -1);
+}
+.item31,
+.text-slide31 {
+  animation-delay: calc(30s / 8 * (36 - 31) * -1);
+}
+.item32,
+.text-slide32 {
+  animation-delay: calc(30s / 8 * (36 - 32) * -1);
+}
+.item33,
+.text-slide33 {
+  animation-delay: calc(30s / 8 * (36 - 33) * -1);
+}
+.item34,
+.text-slide34 {
+  animation-delay: calc(30s / 8 * (36 - 34) * -1);
+}
+.item35,
+.text-slide35 {
+  animation-delay: calc(30s / 8 * (36 - 15) * -1);
+}
+.item36,
+.text-slide36 {
+  animation-delay: calc(30s / 8 * (36 - 36) * -1);
 }
 /* ================================================================================== */
 

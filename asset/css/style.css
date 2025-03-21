@@ -182,7 +182,6 @@ body {
 .item {
   width: 200px;
   height: 100px;
-  overflow: hidden;
   background-color: var(--light-color);
   border-radius: 7px;
   position: absolute;
@@ -192,6 +191,7 @@ body {
   align-items: center;
   justify-content: center;
   box-shadow: 2px 2px 10px rgba(164, 164, 164, 0.452);
+  overflow: hidden;
 }
 .item img {
   width: 150px;

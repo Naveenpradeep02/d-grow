@@ -9,6 +9,9 @@ body {
   initial-value: 0;
   inherits: false;
 }
+html {
+  scroll-behavior: smooth;
+}
 .innerbox {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.447);
 }
